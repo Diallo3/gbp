@@ -1,0 +1,39 @@
+@mixin sans($weight:default) {
+	@if map-get($sansFont,$weight) {
+		font-family: map-get($sansFont,$weight);
+	}
+	@else {
+		font-family: map-get($sansFont,default);
+	}
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+@mixin serif($weight:default) {
+
+	@if map-get($sansFont,$weight) {
+		font-family: map-get($serifFont,$weight);
+	}
+	@else {
+		font-family: map-get($serifFont,default);
+	}
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+// TYPOGRAPHY
+
+html {
+	font-size: 16px;
+	@include bp(medium) {
+		font-size: 14px;
+	}
+	@include bp(small) {
+		font-size: 14px;
+	}
+}
+
+
+
+
+

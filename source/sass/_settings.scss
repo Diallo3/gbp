@@ -1,0 +1,56 @@
+/* PATHS */
+$fontPath : "fonts";
+$imgPath : "../img";
+
+// Breakpoints
+$breakpoints:(
+	small: 667px,
+	medium: 768px,
+	large: 1024px
+);
+
+/* THEME SPECIFIC DEFS */
+
+
+/* FONTS! */
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400italic,400,300italic,300,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
+$merriweather: 'Merriweather', serif;
+$lato: 'Lato' sans-serif;
+$ptsans: 'PT+Sans', sans-serif;
+
+@mixin merriweather($size, $style, $weight) {
+	font-family: $merriweather;
+	font-size: $size;
+	font-style: $style;
+	font-weight: $weight;
+}
+
+@mixin lato($size, $style, $weight) {
+	font-family: $lato;
+	font-size: $size;
+	font-style: $style;
+	font-weight: $weight;
+}
+
+@mixin ptsans($size, $style, $weight) {
+	font-family: $ptsans;
+	font-size: $size;
+	font-style: $style;
+	font-weight: $weight;
+}
+
+
+
+/* CORE SETTINGS */
+
+
+/* GLOBALS */
+$header-height: 100px;
+
+
+/*THEME MIXINS*/
+
+
