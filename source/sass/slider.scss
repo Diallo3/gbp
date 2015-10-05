@@ -63,8 +63,6 @@
     }
     li {
         position: relative;
-
-        .
         &:first-child {
           display: block; 
           -webkit-backface-visibility: visible;
@@ -240,10 +238,10 @@ html[xmlns] .flexslider .slides {
   -moz-border-radius: 20px;
   border-radius: 20px;
   &:hover {
-    background: $org;
+    background: #ccc;
   }
   &.flex-active {
-    background: $white;
+    background: #fff;
     box-shadow: inset 0 0 0.5em #369;
     cursor: default;
   }

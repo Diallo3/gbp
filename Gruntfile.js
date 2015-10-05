@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 					hostname: '0.0.0.0',
 					logger: 'dev',
 					livereload: true,
-					port: 9001,
+					port: 9002,
 					base: 'build',
 				}
 			}
