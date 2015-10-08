@@ -13,36 +13,17 @@ $breakpoints:(
 
 
 /* FONTS! */
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400italic,400,300italic,300,700,700italic);
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:400,300,500,600);
 
-$merriweather: 'Merriweather', serif;
-$lato: 'Lato' sans-serif;
-$ptsans: 'PT+Sans', sans-serif;
+$worksans: 'Work Sans', sans-serif;
 
-@mixin merriweather($size, $style, $weight) {
-	font-family: $merriweather;
+
+@mixin worksans($size, $style, $weight) {
+	font-family: $worksans;
 	font-size: $size;
 	font-style: $style;
 	font-weight: $weight;
 }
-
-@mixin lato($size, $style, $weight) {
-	font-family: $lato;
-	font-size: $size;
-	font-style: $style;
-	font-weight: $weight;
-}
-
-@mixin ptsans($size, $style, $weight) {
-	font-family: $ptsans;
-	font-size: $size;
-	font-style: $style;
-	font-weight: $weight;
-}
-
-
 
 /* CORE SETTINGS */
 
