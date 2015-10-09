@@ -1,3 +1,12 @@
 * {
 	@include worksans(1em, normal, normal);
 }
+
+.vid_btn {
+	@include abs_pos($top: 0, $right: 0, $bottom: 0, $left: 0);
+	@include center_block();
+	@include circle(150px, black(0.5));
+	text-align: center;
+	border: 1px solid white(0.8);
+	z-index: 2;
+}
