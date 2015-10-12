@@ -1,5 +1,11 @@
-* {
+body {
 	@include worksans(1em, normal, normal);
+}
+
+p {
+	a {
+		color: $brick-red;
+	}
 }
 
 .vid_btn {

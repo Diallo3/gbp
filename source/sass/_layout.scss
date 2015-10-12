@@ -3,6 +3,68 @@
 	width: 100%;
 	height: 100vh;
 	position: relative;
+	&.content_entry {
+		background-color: $white;
+		.entry {
+			@include grid-row();
+			position: relative;
+			.headings {
+				@include grid-column(12);
+				.title_container {
+					text-align: right;
+					width: 100%;
+					position: relative;
+					@include bp(medium) {
+						margin-top: -80px;
+					}
+					.title, .tag {
+						color: $lt-gry;
+						text-transform: uppercase;
+						margin: 0;
+					}
+					.title {
+						@include worksans(100%, normal, 200);
+						white-space: nowrap;
+						
+					}
+					.tag {
+						@include worksans(em(36px), normal, 200);
+					}
+				}
+			}
+			
+			.content {
+				@include grid-column(12);
+				text-align: right;
+				@include bp(medium) {
+					@include grid-column(8);
+				}
+				p {
+					@include worksans(em(24px), normal, 200);
+					color: darken($lt-gry, 8%);
+					&:nth-child(2) {
+						color: darken($lt-gry, 12%);
+						font-size: em(20px);
+						text-transform: uppercase;
+						a {
+							 display: block;
+						}
+					}
+				}
+				.cats {
+					border-bottom: 2px solid $oil;
+					margin-bottom: 1em;
+					padding-bottom: 0.5em;
+				}
+			}
+			.img {
+				@include grid-column(12);
+				@include bp(medium) {
+					@include grid-column(4);
+				}
+			}
+		}
+	}
 }
 
 .bg {
@@ -52,10 +114,32 @@
 	}
 	.vid_btn {
 		&:before {
+			@include abs_pos($top: 20%, $left: 40%);
 			content: "\f04b";
 			color: $white;
 			font-family: "fontawesome";
-			font-size: 2em;
+			font-size: 4em;
+		}
+	}
+	.content_strip {
+		background-color: $lt-gry;
+		padding: 1em 0;
+		.title {
+			@include worksans(em(60px), normal, 300);
+		}
+	}
+	.entry {
+		&.bottom {
+			height: 90%;
+			position: relative;
+			.title {
+				@include abs_pos($right: 0, $bottom: -60px);
+				@include worksans($size: em(200px), $style: normal, $weight: 200);
+				color: $white;
+				text-transform: uppercase;
+				text-shadow: 1px 1px 1px black(0.1);
+				z-index: 1;
+			}
 		}
 	}
 }
@@ -63,5 +147,35 @@
 .sidekick_img {
 	.bg {
 		background-image: url("#{$imgPath}/temp-bw-2.jpg");
+	}
+	.entry {
+		blockquote {
+			@include grid-column(12);
+			text-align: right;
+			border: 0;
+			padding: 8em 0 0;
+			@include bp(medium) {
+				@include grid-column(6);
+			}
+			p {
+				@include worksans(em(36px), normal, 200);
+				color: $oil;
+				text-shadow: 1px 1px 0 white(0.2);
+				span {
+					@include clearfix();
+					display: inline-block;
+					em {
+						font-weight: 300;
+						font-style: italic;
+						color: $jet;
+					}
+					&:last-child {
+						border-bottom: 2px solid $jet;
+					}
+				}
+			}
+		}
+
+		
 	}
 }
