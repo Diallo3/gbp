@@ -51,18 +51,19 @@
   background-color: #fff;
   margin: 0;
   padding: 0;
-  max-height: 90vh;
   display: none;
+  position: relative;
   @include bp(medium) {
     display: block;
   }
   .slides {
     > li {
       display: none;
-      -webkit-backface-visibility: hidden;
+      // -webkit-backface-visibility: hidden;
     }
     li {
         position: relative;
+        -webkit-transform: translate3d(0px, 0px, 1px);
         &:first-child {
           display: block; 
           -webkit-backface-visibility: visible;
@@ -70,7 +71,7 @@
     }
     img {
       width: 100%;
-      display: block;
+      display: inline-block;
     }
     &:after {
       content: "\0020";

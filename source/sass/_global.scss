@@ -16,3 +16,17 @@ p {
 	border: 1px solid white(0.8);
 	z-index: 2;
 }
+
+.slide_item {
+	.cta {
+		@include abs_pos($top: 60%, $right:20%);
+		@include worksans(1em, normal, normal);
+		border-left: 2px solid $brick-red;
+		padding-left: 1.5em;
+		display: inline-block;
+		a {
+			color: $white;
+			text-transform: uppercase;
+		}
+	}
+}

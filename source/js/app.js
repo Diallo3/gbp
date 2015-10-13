@@ -41,6 +41,13 @@ $(document).ready(function(){
 	    scrollHorizontal: false // Set to true if your website scrolls horizontal instead of vertical.
 	});
 
+	$('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        useCSS: false,
+        video: true
+    });
+
 
 	// Hamburger
 	var toggles = document.querySelectorAll(".c-hamburger");
