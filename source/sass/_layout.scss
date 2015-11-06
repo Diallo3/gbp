@@ -7,6 +7,10 @@
 		background-color: $white;
 		.headings_container {
 			text-align: center;
+			@include bp(medium) {
+				position: relative;
+				top: -80px;
+			}
 			.title, .tag {
 				color: $lt-gry;
 				text-transform: uppercase;
@@ -15,9 +19,6 @@
 			.title {
 				@include worksans(em(120px), normal, 200);
 				white-space: nowrap;
-				@include bp(medium) {
-					margin-top: -80px;
-				}
 			}
 		}
 		.headings {
@@ -43,6 +44,11 @@
 				text-align: right;
 				@include bp(medium) {
 					@include grid-column(8);
+				}
+				.cap {
+					@include worksans(em(24px), normal, 300);
+					color: darken($lt-gry, 8%);
+					text-transform: uppercase;
 				}
 				p {
 					@include worksans(em(24px), normal, 200);
@@ -73,7 +79,7 @@
 }
 
 .bg {
-	background-color: red;
+	background-color: $black;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center ;
@@ -155,6 +161,26 @@
 	.bg {
 		background-image: url("#{$imgPath}/temp-bw-2.jpg");
 	}
+	&.time_elapse {
+		.bg {
+			background-image: url("#{$imgPath}/temp-7.jpg");
+		}
+	}
+	&.bhutan {
+		.bg {
+			background-image: url("#{$imgPath}/temp-2.jpg");
+		}
+	}
+	&.tourism {
+		.bg {
+			background-image: url("#{$imgPath}/temp-5.jpg");
+		}
+	}
+	&.youthculture {
+		.bg {
+			background-image: url("#{$imgPath}/temp-6.jpg");
+		}
+	}
 	.entry {
 		blockquote {
 			@include grid-column(12);
@@ -186,6 +212,7 @@
 }
 
 .slideshow {
+	overflow: hidden;
 	.content_strip {
 		@include abs_pos($top: 30%);
 		width: 100%;
@@ -199,5 +226,106 @@
 				text-transform: uppercase;
 			}
 		}
+	}
+	img {
+		width: 100%;
 	}	
+}
+
+.travel {
+	.sidekick_img {
+		.content {
+			@include grid-column(12);
+			text-align: center;
+			padding-top: 5.5em;
+			@include bp(medium) {
+				@include grid-column(6, $offset: 6);
+			}
+			span {
+				display: block;
+			}
+			h3, h4 {
+				line-height: 1;
+			}
+			h3 {
+				@include worksans(90px, normal, 600);
+				color: $dodge-blu;
+				text-transform: uppercase;
+				margin-bottom: 0.5em;
+				.top, .bot {
+					color: $white;
+				}
+				.top {
+					@include worksans(70px, normal, 200);
+					text-transform: uppercase;
+				}
+				.bot {
+					@include worksans(25px, normal, 200);
+				}
+			}
+			h4 {
+				@include worksans(175px, normal, 600);
+				color: $warning-color;
+
+				span {
+					@include worksans(28px, normal, 200);
+					color: $white;
+				}
+			}
+		}
+	}	
+}
+
+.time_elaspe {
+	.content {
+		@include grid-column(12);
+		@include bp(medium) {
+			@include grid-column(6, $offset: 6);
+		}
+	}
+}
+
+.bhutan {
+	.content {
+		@include grid-column(12);
+		@include bp(medium) {
+			@include grid-column(10);
+			padding-top: 30%;
+		}
+		header {
+			width: auto;
+			position: relative;
+		}
+		h3 {
+			@include worksans(em(230px), normal, 700);
+			color: $white;
+			line-height: 0.8;
+			span {
+				@include worksans(40px, normal, 300);
+				text-align: right;
+				text-transform: uppercase;
+				border-right: 2px solid $brick-red;
+				display: block;
+			}
+		}
+	}
+}
+
+.tourism {
+	.content {
+		@include grid-column(12);
+		@include bp(medium) {
+			@include grid-column(6);
+			padding-top: 5em;
+			blockquote {
+				text-align: right;
+				padding-left: 12em;
+				width: 100%;
+				p {
+					@include worksans(20px, normal, 300);
+					color: $white;
+				}
+			}
+		}
+	}
 }

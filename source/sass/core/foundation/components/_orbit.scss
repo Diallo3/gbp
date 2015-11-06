@@ -140,11 +140,11 @@ $orbit-timer-hide-for-small: true !default;
         position: relative;
 
         // Prevents images (and captions) from disappearing after first rotation on Chrome for Android
-        -webkit-transform: translateZ(0);
-        -moz-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-        -o-transform: translateZ(0);
-        transform: translateZ(0);
+        // -webkit-transform: translateZ(0);
+        // -moz-transform: translateZ(0);
+        // -ms-transform: translateZ(0);
+        // -o-transform: translateZ(0);
+        // transform: translateZ(0);
 
         img { display: block; max-width: 100%; }
 
