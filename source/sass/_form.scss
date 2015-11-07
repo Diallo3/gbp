@@ -1,0 +1,151 @@
+.contact {
+    .bg {
+        background-image: url("#{$imgPath}/temp-1.jpg");
+
+        padding: 6em 0 2em;
+    }
+    .social {
+        padding: 2em 0;
+
+        @include grid-column(12);
+        .social_list {
+            @include clearfix();
+            @include inline_list();
+            @include centered_list();
+        }
+    }
+
+    .title {
+        color: $white;
+        line-height: 1;
+        text-align: center;
+        margin: 0;
+
+        @include worksans(em(60px), normal, 200);
+        span {
+            display: block;
+
+            @include worksans(em(6px), normal, 400);
+        }
+    }
+}
+
+.jf-form {
+    label {
+        margin-bottom: 5px;
+        max-width: 100%;
+
+        display: none;
+    }
+
+    .form-group {
+        margin-bottom: 1.5em;
+
+        position: relative;
+    }
+
+    .f_name,
+    .f_email,
+    .f_phone,
+    .f_service {
+        @include bp(medium) {
+            @include grid-column(6);
+        }
+        @include grid-column(12);
+    }
+
+    .f_comment,
+    .f_captcha,
+    .submit {
+        @include grid-column(12);
+    }
+
+    .f_captcha {
+        .g-recaptcha {
+            margin: 0 auto;
+            width: 305px;
+        }
+    }
+
+    .submit {
+        text-align: center;
+        .btn {
+            text-transform: uppercase;
+            border: 1px solid #aaa;
+            padding: 1em 2em;
+
+            display: inline-block;
+        }
+    }
+
+    .form-control {
+        color: #555;
+        font-size: 14px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        background-image: none;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        border: 1px solid #aaa;
+        border-radius: 2px;
+        padding: 6px 12px;
+        width: 100%;
+        height: 34px;
+
+        display: block;
+
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+             -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+}
+
+.jf-option-box {
+    margin-left: 8px;
+
+    display: none;
+}
+
+.jf-hide {
+    display: none;
+}
+
+.jf-disabled {
+    background-color: #eee;
+
+    pointer-events: none;
+    opacity: .6;
+}
+
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+    margin-top: 4px \9;
+    margin-left: 0;
+
+    position: absolute;
+}
+
+.error,
+.validation-error {
+    padding: 5px;
+}
+
+.error {
+    color: #a94442;
+    margin-top: 10px;
+}
+
+.server-error {
+    font-weight: bold;
+}
+
+.form-group.required {
+    &:before {
+        content: "*";
+        color: #d00;
+
+        @include abs_pos($top: 20%, $right: 5%);
+    }
+}

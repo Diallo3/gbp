@@ -171,11 +171,19 @@ $pixelBase : 16;
 	margin: $margin;
 	padding: $padding;
 	float: $float;
+	position: relative;
 	li {
 		margin: $li-margin;
 		padding: $li-padding;
 		float: $li-float;
 		position: relative;
+	}
+}
+
+@mixin centered_list {
+	left: 50%;
+	li {
+		right: 50%;
 	}
 }
 
