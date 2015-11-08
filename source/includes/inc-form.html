@@ -1,0 +1,101 @@
+<section class="block contact">
+    <div class="bg">
+        <div class="overlay"></div>
+        <article class="entry">
+            <header>
+                <h1 class="title"><span>What were you thinking?</span>Connect with People</h1>
+            </header>
+            <div class="social">
+                <ul class="social_list">
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            
+            <!-- form -->
+            <div class="container jf-form">
+                <form data-licenseKey="" name="jqueryform-29c4b7" id="jqueryform-29c4b7" action='form/  admin.php' method='post' enctype='multipart/form-data' novalidate autocomplete="on">
+                    <input type="hidden" name="method" value="validateForm">
+                    <input type="hidden" id="serverValidationFields" name="serverValidationFields" value="">
+
+                    <!-- name -->
+                    <div class="form-group f_name c1 required" data-cid="c1">
+                        <label class="control-label" for="c1">Full Name</label>
+                        <input type="text" class="form-control" id="c1" name="c1" value=""   placeholder="Full Name" data-rule-required="true"  />
+                    </div>
+
+
+                    <!-- email -->
+                    <div class="form-group f_email c2 required" data-cid="c2">
+                        <label class="control-label" for="c2">Email</label>
+                        <input type="email" class="form-control" id="c2" name="c2" value=""  placeholder="Email Adress" data-rule-email="true" data-rule-required="true"  />
+                    </div>
+
+
+                    <!-- phone -->
+                    <div class="form-group f_phone c21 " data-cid="c21">
+                        <label class="control-label" for="c21">Phone</label>
+                        <input type="number" class="form-control" id="c21" name="c21" value="" placeholder="Phone IE: 555-123-4567" data-rule-number="true"  />
+                    </div>
+
+                    <!-- services -->
+                    <div class="form-group f_service c28 " data-cid="c28">
+                        <label class="control-label" for="c28">Select</label>
+                        <div class="select_field">
+                            <select class="form-control " id="c28" name="c28"   >
+                                <option selected value="- Select -">Select One</option>
+                                <option value="Design Services">Design Services</option>
+                                <option value="Video Production">Video Production</option>
+                                <option value="Custom Photography">Custom Photography</option>
+                                <option value="All Services">All Services</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <!-- comments -->
+                    <div class="form-group f_comment c3 required" data-cid="c3">
+                        <label class="control-label" for="c3">Comments</label>
+                        <textarea class="form-control" id="c3" name="c3" rows="3"  placeholder="Questions or comments" data-rule-required="true" ></textarea> 
+                    </div>
+
+                    <!-- captcha -->
+                    <div class='form-group f_captcha recaptcha'>
+                        <script type="text/javascript">
+                            function renderReCaptcha(){
+                                var jfKey = '6Ldh_QkTAAAAAA1WdrF09PX4bYuZklOKqzAZ916H', // when form loaded from jqueryform.com
+                                realKey = '6LeDbRATAAAAABCtE2LoY6JZDtKDcAC2k8DmVtCC',
+                                theme = 'light',
+                                key = -1 !== location.href.indexOf('jqueryform.com/') ? jfKey : realKey;
+                                grecaptcha.render( document.getElementById('g-recaptcha'), {
+                                  'sitekey' : key,
+                                  'theme' : theme
+                                });
+                            };
+                        </script>
+                        <script src="https://www.google.com/recaptcha/api.js?hl=&onload=renderReCaptcha&render=explicit" async defer></script>
+                        <div id='g-recaptcha' class='g-recaptcha col_field' data-theme='dark' data-sitekey='6LeDbRATAAAAABCtE2LoY6JZDtKDcAC2k8DmVtCC'></div>
+                    </div>
+
+
+                    <!-- submit -->
+                    <div class="form-group submit">
+                        <div class="progress" style="display: none; z-index: -1; position: absolute;">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" style="width:100%"></div>
+                        </div>
+                        <button type="submit" class="btn" style="z-index: 1;">Lets do this!</button>
+                        <p class="error bg-warning" style="display:none;">Please check the required fields.</p>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="container jf-thankyou" style="display:none;" data-redirect="" data-seconds="10">
+                <h3>Your form has been submitted. Thank You!</h3>
+            </div>
+            <!-- /form -->
+        </article>
+    </div>
+</section>

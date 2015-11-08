@@ -21,6 +21,7 @@
 		<div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
 
+                <!-- Header -->
                 <div class="header_container">
                     <header class="main">
                         <section class="logo">
@@ -38,6 +39,7 @@
                     </header>
                 </div>
 
+                <!-- Hero -->
                 <section class="block hero">
                     <div class="bg">
                         <div class="content_strip">
@@ -53,6 +55,7 @@
                     </div>
                 </section>
 
+                <!-- Sidekick -->
                 <section class="block sidekick_vid">
                     <a href="#"><div class="vid_btn"></div></a>
                     <div class="bg">
@@ -70,7 +73,7 @@
                     </div>
                 </section>
 
-                
+                <!-- Commision -->
                 <div class="section_block commision">
                     <section class="block sidekick_img">
                         <div class="bg">
@@ -142,7 +145,7 @@
                     </div>
                 </section>
 
-                <!--  -->
+                <!-- Travel -->
                 <div class="section_block commision travel">
                     <section class="block sidekick_img">
                         <div class="bg">
@@ -268,7 +271,7 @@
                         </article>
                     </section>
                 </div>
-
+                
                 <!-- Slideshow -->
                 <section class="block slideshow">
 
@@ -297,7 +300,7 @@
                     </div>
                 </section>
 
-                <!-- Tourism -->
+                <!-- Youth Culture -->
                 <div class="section_block commision">
                     <section class="block sidekick_img youthculture">
                         <div class="bg">
@@ -349,16 +352,17 @@
 
                 <section class="block contact">
                     <div class="bg">
+                        <div class="overlay"></div>
                         <article class="entry">
                             <header>
                                 <h1 class="title"><span>What were you thinking?</span>Connect with People</h1>
                             </header>
                             <div class="social">
                                 <ul class="social_list">
-                                    <li><a href="#">Linked In</a></li>
-                                    <li><a href="#">Twitter</a></li>
-                                    <li><a href="#">Twitter</a></li>
-                                    <li><a href="#">Instagram</a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                             
@@ -391,13 +395,15 @@
                                     <!-- services -->
                                     <div class="form-group f_service c28 " data-cid="c28">
                                         <label class="control-label" for="c28">Select</label>
-                                        <select class="form-control " id="c28" name="c28"   >
-                                            <option selected value="- Select -">- Select -</option>
-                                            <option selected value="Design Services">Design Services</option>
-                                            <option selected value="Video Production">Video Production</option>
-                                            <option selected value="Custom Photography">Custom Photography</option>
-                                            <option selected value="All Services">All Services</option>
-                                        </select> 
+                                        <div class="select_field">
+                                            <select class="form-control " id="c28" name="c28"   >
+                                                <option selected value="- Select -">Select One</option>
+                                                <option value="Design Services">Design Services</option>
+                                                <option value="Video Production">Video Production</option>
+                                                <option value="Custom Photography">Custom Photography</option>
+                                                <option value="All Services">All Services</option>
+                                            </select>
+                                        </div>
                                     </div>
 
 
@@ -413,7 +419,7 @@
                                             function renderReCaptcha(){
                                                 var jfKey = '6Ldh_QkTAAAAAA1WdrF09PX4bYuZklOKqzAZ916H', // when form loaded from jqueryform.com
                                                 realKey = '6LeDbRATAAAAABCtE2LoY6JZDtKDcAC2k8DmVtCC',
-                                                theme = 'dark',
+                                                theme = 'light',
                                                 key = -1 !== location.href.indexOf('jqueryform.com/') ? jfKey : realKey;
                                                 grecaptcha.render( document.getElementById('g-recaptcha'), {
                                                   'sitekey' : key,

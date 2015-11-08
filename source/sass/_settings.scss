@@ -1,33 +1,32 @@
 /* PATHS */
-$fontPath : "fonts";
-$imgPath : "../img";
+$fontPath: "fonts";
+$imgPath: "../img";
 
 // Breakpoints
-$breakpoints:(
-	small: 667px,
-	medium: 768px,
-	large: 1024px
+$breakpoints: (
+    small: 667px,
+    medium: 768px,
+    large: 1024px
 );
 
 /* THEME SPECIFIC DEFS */
 $lt-gry: #c2c2c2;
 $sage-blu: #608ec0;
 $dodge-blu: #7db1db;
-$brick-red: #ca6167; 
+$brick-red: #ca6167;
 
 
 
 /* FONTS! */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:400,300,200,500,600,700);
-
-$worksans: 'Work Sans', sans-serif;
+$worksans: "Work Sans", sans-serif;
 
 
 @mixin worksans($size, $style, $weight) {
-	font-family: $worksans;
-	font-size: $size;
-	font-style: $style;
-	font-weight: $weight;
+    font-family: $worksans;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
 }
 
 /* CORE SETTINGS */
@@ -38,5 +37,3 @@ $header-height: 100px;
 
 
 /*THEME MIXINS*/
-
-
