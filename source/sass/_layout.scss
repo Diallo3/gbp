@@ -1,331 +1,412 @@
+.section_block {
+    @include clearfix();
+}
+
 .block {
-	background-color: #ccc;
-	width: 100%;
-	height: 100vh;
-	position: relative;
-	&.content_entry {
-		background-color: $white;
-		.headings_container {
-			text-align: center;
-			@include bp(medium) {
-				position: relative;
-				top: -80px;
-			}
-			.title, .tag {
-				color: $lt-gry;
-				text-transform: uppercase;
-				margin: 0;
-			}
-			.title {
-				@include worksans(em(120px), normal, 200);
-				white-space: nowrap;
-			}
-		}
-		.headings {
-			@include grid-row();
-			.title_container {
-				@include grid-column(12);
-				text-align: right;
-				width: 100%;
-				position: relative;
-				.tag {
-					@include worksans(em(36px), normal, 200);
-				}
-			}
-		}
-		.entry {
-			@include grid-row();
-			position: relative;
-			.headings_container {
-				text-align: center;
-			}			
-			.content {
-				@include grid-column(12);
-				text-align: right;
-				@include bp(medium) {
-					@include grid-column(8);
-				}
-				.cap {
-					@include worksans(em(24px), normal, 300);
-					color: darken($lt-gry, 8%);
-					text-transform: uppercase;
-				}
-				p {
-					@include worksans(em(24px), normal, 200);
-					color: darken($lt-gry, 8%);
-					&:nth-child(2) {
-						color: darken($lt-gry, 12%);
-						font-size: em(20px);
-						text-transform: uppercase;
-						a {
-							 display: block;
-						}
-					}
-				}
-				.cats {
-					border-bottom: 2px solid $oil;
-					margin-bottom: 1em;
-					padding-bottom: 0.5em;
-				}
-			}
-			.img {
-				@include grid-column(12);
-				@include bp(medium) {
-					@include grid-column(4);
-				}
-			}
-		}
-	}
+    background-color: #ccc;
+    width: 100%;
+    height: 100vh;
+    clear: both;
+    position: relative;
+    &.content_entry {
+        background-color: $white;
+        .headings_container {
+            @include bp(medium) {
+                position: relative;
+                top: -80px;
+            }
+            text-align: center;
+            .title, .tag {
+                color: $lt-gry;
+                text-transform: uppercase;
+                margin: 0;
+            }
+            .title {
+                @include worksans(em(120px), normal, 200);
+                white-space: nowrap;
+            }
+        }
+        .headings {
+            @include grid-row();
+            .title_container {
+                @include grid-column(12);
+                @include bp(medium) {
+                    text-align: right;
+                }
+                text-align: center;
+                width: 100%;
+                position: relative;
+                .tag {
+                    @include worksans(em(24px), normal, 200);
+                    @include bp(medium) {
+                        @include worksans(em(36px), normal, 200);
+                    }
+                }
+            }
+        }
+        .entry {
+            @include grid-row();
+            position: relative;
+            .headings_container {
+                text-align: center;
+            }
+            .content {
+                @include grid-column(12);
+                @include bp(medium) {
+                    @include grid-column(8);
+                    text-align: right;
+                }
+                text-align: center;
+                .cap {
+                    @include worksans(em(24px), normal, 300);
+                    color: darken($lt-gry, 8%);
+                    text-transform: uppercase;
+                }
+                p {
+                    @include worksans(em(24px), normal, 200);
+                    color: darken($lt-gry, 8%);
+                    &:nth-child(2) {
+                        color: darken($lt-gry, 12%);
+                        font-size: em(20px);
+                        text-transform: uppercase;
+                        a {
+                            display: block;
+                        }
+                    }
+                }
+                .cats {
+                    border-bottom: 2px solid $oil;
+                    margin-bottom: 1em;
+                    padding-bottom: .5em;
+                }
+            }
+            .img {
+                @include grid-column(12);
+                @include bp(medium) {
+                    @include grid-column(4);
+                }
+            }
+        }
+    }
 }
 
 .bg {
-	background-color: $black;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center ;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
-	position: static;
-	z-index: 0;
-	// -webkit-transform: translateZ(0);
-	.entry {
-		@include grid-row();
-	}
+    background-color: $black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center ;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: static;
+    z-index: 0;
+    // -webkit-transform: translateZ(0);
+    .entry {
+        @include grid-row();
+    }
 }
 
 .position {
-	@include worksans(em(32px), normal, 300);
-	color: $dodge-blu;
-	sup {
-		color: lighten($brick-red, 10%);
-	}
+    @include worksans(em(32px), normal, 300);
+    color: $dodge-blu;
+    sup {
+        color: lighten($brick-red, 10%);
+    }
 }
 
 .hero {
-	.bg {
-		background-image: url("#{$imgPath}/temp-1.jpg");
-	}
-	.content_strip {
-		@include abs_pos($bottom: 0);
-		background-color: $white;
-		padding: 1em 0;
-		width: 100%;
-	}
-	.title_container {
-		text-align: right;
-		.title {
-			@include worksans(em(60px), normal, 300);
-		}
+    .bg {
+        background-image: url("#{$imgPath}/img_start.jpg");
 
-	}
+    }
+    .content_strip {
+        @include abs_pos($bottom: 0);
+        background-color: $white;
+        padding: 1em 0;
+        width: 100%;
+    }
+    .title_container {
+        @include bp(medium) {
+            text-align: right;
+            .title {
+                @include worksans(em(60px), normal, 300);
+            }
+        }
+        text-align: center;
+    }
 }
 
 .sidekick_vid {
-	.bg {
-		background-image: url("#{$imgPath}/temp-bw-1.jpg");
-	}
-	.vid_btn {
-		&:before {
-			@include abs_pos($top: 20%, $left: 40%);
-			content: "\f04b";
-			color: $white;
-			font-family: "fontawesome";
-			font-size: 4em;
-		}
-	}
-	.content_strip {
-		background-color: $lt-gry;
-		padding: 1em 0;
-		.title {
-			@include worksans(em(60px), normal, 300);
-		}
-	}
-	.entry {
-		&.bottom {
-			height: 90%;
-			position: relative;
-			.title {
-				@include abs_pos($right: 0, $bottom: -60px);
-				@include worksans($size: em(200px), $style: normal, $weight: 200);
-				color: $white;
-				text-transform: uppercase;
-				text-shadow: 1px 1px 1px black(0.1);
-				z-index: 1;
-			}
-		}
-	}
+    .bg {
+        background-image: url("#{$imgPath}/temp-bw-1.jpg");
+
+    }
+    .vid_btn {
+        &:before {
+            @include abs_pos($top: 20%, $left: 40%);
+            content: "\f04b";
+            color: $white;
+            font-family: "fontawesome";
+            font-size: 4em;
+        }
+    }
+    .content_strip {
+        background-color: $lt-gry;
+        padding: 1em 0;
+        .title {
+            @include worksans(em(30px), normal, 400);
+            @include bp(medium) {
+                @include worksans(em(60px), normal, 300);
+                text-align: left;
+            }
+            text-align: center;
+        }
+    }
+    .entry {
+        &.bottom {
+            height: 90%;
+            position: relative;
+            .title {
+                @include worksans($size: em(110px), $style: normal, $weight: 200);
+                @include bp(medium) {
+                    @include worksans($size: em(200px), $style: normal, $weight: 200);
+                    @include abs_pos($right: 0, $bottom: -60px);
+                    z-index: 1;
+                }
+                color: $white;
+                text-align: center;
+                text-transform: uppercase;
+                text-shadow: 1px 1px 1px black(.1);
+            }
+        }
+    }
 }
 
 .sidekick_img {
-	.bg {
-		background-image: url("#{$imgPath}/temp-bw-2.jpg");
-	}
-	&.time_elapse {
-		.bg {
-			background-image: url("#{$imgPath}/temp-7.jpg");
-		}
-	}
-	&.bhutan {
-		.bg {
-			background-image: url("#{$imgPath}/temp-2.jpg");
-		}
-	}
-	&.tourism {
-		.bg {
-			background-image: url("#{$imgPath}/temp-5.jpg");
-		}
-	}
-	&.youthculture {
-		.bg {
-			background-image: url("#{$imgPath}/temp-6.jpg");
-		}
-	}
-	.entry {
-		blockquote {
-			@include grid-column(12);
-			text-align: right;
-			border: 0;
-			padding: 8em 0 0;
-			@include bp(medium) {
-				@include grid-column(6);
-			}
-			p {
-				@include worksans(em(36px), normal, 200);
-				color: $oil;
-				text-shadow: 1px 1px 0 white(0.2);
-				span {
-					@include clearfix();
-					display: inline-block;
-					em {
-						font-weight: 300;
-						font-style: italic;
-						color: $jet;
-					}
-					&:last-child {
-						border-bottom: 2px solid $jet;
-					}
-				}
-			}
-		}
-	}
+    .bg {
+        background-image: url("#{$imgPath}/temp-bw-2.jpg");
+
+    }
+    &.time_elapse {
+        .bg {
+            background-image: url("#{$imgPath}/temp-7.jpg");
+
+        }
+    }
+    &.bhutan {
+        .bg {
+            background-image: url("#{$imgPath}/temp-2.jpg");
+
+        }
+    }
+    &.tourism {
+        .bg {
+            background-image: url("#{$imgPath}/temp-5.jpg");
+
+        }
+    }
+    &.youthculture {
+        .bg {
+            background-image: url("#{$imgPath}/img_commision_yc.jpg");
+
+        }
+    }
+    .entry {
+        blockquote {
+            @include grid-column(12);
+            @include bp(medium) {
+                @include grid-column(6);
+                text-align: right;
+            }
+            text-align: center;
+            border: 0;
+            padding: 8em 0 0;
+            p {
+                @include worksans(em(36px), normal, 200);
+                color: $oil;
+                text-shadow: 1px 1px 0 white(.2);
+                span {
+                    @include clearfix();
+                    display: inline-block;
+                    em {
+                        color: $jet;
+                        font-weight: 300;
+                        font-style: italic;
+                    }
+                    &:last-child {
+                        border-bottom: 2px solid $jet;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .slideshow {
-	overflow: hidden;
-	.content_strip {
-		@include abs_pos($top: 30%);
-		width: 100%;
-	}
-	.entry {
-		@include grid-row();
-		.content {
-			@include grid-column(12);
-			.title {
-				font-size: em(18px);
-				text-transform: uppercase;
-			}
-		}
-	}
-	img {
-		width: 100%;
-	}	
+    @include bp(medium) {
+        height: 100vh;
+        overflow: hidden;
+    }
+    height: auto;
+    min-height: 100vh;
+    .content_strip {
+        @include abs_pos($top: 30%);
+        width: 100%;
+    }
+    .entry {
+        @include grid-row();
+        .content {
+            @include grid-column(12);
+            .title {
+                font-size: em(18px);
+                text-transform: uppercase;
+            }
+        }
+    }
+    img {
+        width: 100%;
+    }
 }
 
 .travel {
-	.sidekick_img {
-		.content {
-			@include grid-column(12);
-			text-align: center;
-			padding-top: 5.5em;
-			@include bp(medium) {
-				@include grid-column(6, $offset: 6);
-			}
-			span {
-				display: block;
-			}
-			h3, h4 {
-				line-height: 1;
-			}
-			h3 {
-				@include worksans(90px, normal, 600);
-				color: $dodge-blu;
-				text-transform: uppercase;
-				margin-bottom: 0.5em;
-				.top, .bot {
-					color: $white;
-				}
-				.top {
-					@include worksans(70px, normal, 200);
-					text-transform: uppercase;
-				}
-				.bot {
-					@include worksans(25px, normal, 200);
-				}
-			}
-			h4 {
-				@include worksans(175px, normal, 600);
-				color: $warning-color;
+    .sidekick_img {
+        .content {
+            @include grid-column(12);
+            @include bp(medium) {
+                @include grid-column(6, $offset: 6);
+            }
+            text-align: center;
+            padding-top: 5.5em;
+            span {
+                display: block;
+            }
+            h3, h4 {
+                line-height: 1;
+            }
+            h3 {
+                @include worksans(90px, normal, 600);
+                color: $dodge-blu;
+                text-transform: uppercase;
+                margin-bottom: .5em;
+                .top, .bot {
+                    color: $white;
+                }
+                .top {
+                    @include worksans(70px, normal, 200);
+                    text-transform: uppercase;
+                }
+                .bot {
+                    @include worksans(25px, normal, 200);
+                }
+            }
+            h4 {
+                @include worksans(175px, normal, 600);
+                color: $warning-color;
 
-				span {
-					@include worksans(28px, normal, 200);
-					color: $white;
-				}
-			}
-		}
-	}	
+                span {
+                    @include worksans(28px, normal, 200);
+                    color: $white;
+                }
+            }
+        }
+    }
 }
 
 .time_elaspe {
-	.content {
-		@include grid-column(12);
-		@include bp(medium) {
-			@include grid-column(6, $offset: 6);
-		}
-	}
+    .content {
+        @include grid-column(12);
+        @include bp(medium) {
+            @include grid-column(6, $offset: 6);
+        }
+    }
 }
 
 .bhutan {
-	.content {
-		@include grid-column(12);
-		@include bp(medium) {
-			@include grid-column(10);
-			padding-top: 30%;
-		}
-		header {
-			width: auto;
-			position: relative;
-		}
-		h3 {
-			@include worksans(em(230px), normal, 700);
-			color: $white;
-			line-height: 0.8;
-			span {
-				@include worksans(40px, normal, 300);
-				text-align: right;
-				text-transform: uppercase;
-				border-right: 2px solid $brick-red;
-				display: block;
-			}
-		}
-	}
+    .content {
+        @include grid-column(12);
+        @include bp(medium) {
+            @include grid-column(10);
+            padding-top: 30%;
+        }
+        padding-top: 50%;
+        header {
+            width: auto;
+            position: relative;
+        }
+        h3 {
+            @include bp(medium) {
+                @include worksans(em(230px), normal, 700);
+                line-height: .8;
+            }
+            @include worksans(em(110px), normal, 700);
+            color: $white;
+            line-height: .8;
+
+            span {
+                @include bp(medium) {
+                    @include worksans(40px, normal, 300);
+                }
+                @include worksans(20px, normal, 300);
+                text-align: right;
+                text-transform: uppercase;
+                border-right: 4px solid $brick-red;
+                padding-right: .2em;
+                display: block;
+            }
+        }
+    }
 }
 
 .tourism {
-	.content {
-		@include grid-column(12);
-		@include bp(medium) {
-			@include grid-column(6);
-			padding-top: 5em;
-			blockquote {
-				text-align: right;
-				padding-left: 12em;
-				width: 100%;
-				p {
-					@include worksans(20px, normal, 300);
-					color: $white;
-				}
-			}
-		}
-	}
+    .content {
+        @include grid-column(12);
+        @include bp(medium) {
+            @include grid-column(6);
+            padding-top: 5em;
+            blockquote {
+                text-align: right;
+                padding-left: 12em;
+                width: 100%;
+                p {
+                    @include worksans(20px, normal, 300);
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.video, .contact {
+    @include bp(medium) {
+        height: 100vh;
+    }
+    height: auto;
+}
+
+// blog entry
+.excerpt {
+    @include clearfix();
+    background-color: $royal-blue;
+    border: solid $white;
+    border-width: 10px 0 0;
+    padding: 2em;
+    width: 100%;
+    clear: both;
+    .excerpt_entry {
+        @include grid-row();
+        p {
+            @include bp(medium) {
+                text-align: left;
+            }
+            color: $white;
+            font-family: Georgia;
+            font-size: 1.3em;
+            font-style: italic;
+            text-align: center;
+        }
+    }
+}
+
+.flex-video {
+    margin-bottom: 0;
 }

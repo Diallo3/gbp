@@ -7,10 +7,11 @@ $(document).ready(function(){
 			close_on_click: true
 		},
 		orbit : {
-			timer_speed: 2000,
+			timer_speed: 8000,
 			resume_on_mouseout: true,
 			slide_number: false,
-			bullets: false
+			bullets: false,
+			stack_on_small: true
 		}
 	});
 
@@ -46,6 +47,8 @@ $(document).ready(function(){
 	    repeat: true, // Add the possibility to remove the class if the elements are not visible
 	    scrollHorizontal: false // Set to true if your website scrolls horizontal instead of vertical.
 	});
+
+    var s = skrollr.init();
 
 	// Hamburger
 	var toggles = document.querySelectorAll(".c-hamburger");
