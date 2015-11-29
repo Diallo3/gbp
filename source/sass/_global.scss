@@ -1,32 +1,32 @@
 body {
-	@include worksans(1em, normal, normal);
+    @include worksans(1em, normal, normal);
 }
 
 p {
-	a {
-		color: $brick-red;
-	}
+    a {
+        color: $brick-red;
+    }
 }
 
 .vid_btn {
-	@include abs_pos($top: 0, $right: 0, $bottom: 0, $left: 0);
-	@include center_block();
-	@include circle(150px, black(0.5));
-	text-align: center;
-	border: 1px solid white(0.8);
-	z-index: 2;
+    @include abs_pos($top: 0, $right: 0, $bottom: 0, $left: 0);
+    @include center_block();
+    @include circle(150px, black(.5));
+    text-align: center;
+    border: 1px solid white(.8);
+    z-index: 2;
 }
 
 .slide_item {
-	.cta {
-		@include abs_pos($top: 60%, $right:20%);
-		@include worksans(1em, normal, normal);
-		border-left: 2px solid $brick-red;
-		padding-left: 1.5em;
-		display: inline-block;
-		a {
-			color: $white;
-			text-transform: uppercase;
-		}
-	}
+    .cta {
+        @include abs_pos($top: 60%, $right:20%);
+        @include worksans(1em, normal, normal);
+        border-left: 2px solid $brick-red;
+        padding-left: 1.5em;
+        display: inline-block;
+        a {
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
 }

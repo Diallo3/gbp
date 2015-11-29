@@ -1,7 +1,11 @@
 <!-- Tourism -->
-<div class="section_block commision">
+<div id="tourism" class="section_block commision">
+    <a name="tourism"></a>
     <section class="block sidekick_img tourism">
-        <div class="bg">
+        <div class="bg"
+            data-center="background-position: 50% 0px;"
+            data-top-bottom="background-position: 50% -200px;"
+        >
             <article class="entry">
                 <div class="content">
                     <blockquote>
@@ -9,12 +13,21 @@
                     </blockquote>    
                 </div>
             </article>
+            <div class="curtain"
+                data-bottom-top="opacity: 0"
+                data-106-top="height: 1%; top: -10%; opacity: 0;"
+                data-center="height: 100%; top: 0%; opacity: 0.2"
+                data-anchor-target="#tourism"
+            ></div>
         </div>
     </section>
 
 
     <section class="block content_entry">
-        <div class="headings_container">
+        <div class="headings_container"
+            data-bottom="opacity: 0;" 
+            data-300-top="opacity: 1;" 
+        >
             <h1 class="title">Commision: Tourism</h1>
             <div class="headings">
                 <header class="title_container">
@@ -40,16 +53,15 @@
                 </div>
 
             </section>
-            <div class="img">
-                <figure>
-                    <img src="http://placehold.it/500x300" alt="">
-                </figure>
-            </div>
+            include "inc-map.html"
         </article>
     </section>
 
     <!-- excerpt -->
-    <section class="excerpt">
+    <section class="excerpt"
+        data-bottom="opacity: 0;" 
+        data-300-top="opacity: 1;"
+    >
         <article class="excerpt_entry">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quod, cum quaerat atque, optio possimus eos vel iste facilis natus ad, sapiente, fugit. Similique voluptatem nihil asperiores quam dicta.</p>
         </article>

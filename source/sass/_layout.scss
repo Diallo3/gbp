@@ -220,7 +220,7 @@
             }
             text-align: center;
             border: 0;
-            padding: 8em 0 0;
+            padding: 15em 0 0;
             p {
                 @include worksans(em(36px), normal, 200);
                 color: $oil;
@@ -330,6 +330,12 @@
         }
         padding-top: 50%;
         header {
+            @include bp(medium) {
+                // position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+            }
             width: auto;
             position: relative;
         }
@@ -409,4 +415,20 @@
 
 .flex-video {
     margin-bottom: 0;
+}
+
+.map {
+    position: relative;
+    img {
+        position: absolute;
+    }
+}
+
+.curtain {
+    @include abs_pos($top: 0, $left: 0);
+    background-color: $black;
+    width: 300%;
+    height: 1px;
+
+    opacity: 0;
 }

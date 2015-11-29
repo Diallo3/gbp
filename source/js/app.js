@@ -26,7 +26,7 @@ $(document).ready(function(){
 	});
 
 	// smooth scroll
-	$('.scroll_btn[href*=#]:not([href=#])').click(function() {
+	$('[href*=#]:not([href=#])').click(function() {
 	    if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
 	      	var target = $(this.hash);
 	      	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -48,7 +48,10 @@ $(document).ready(function(){
 	    scrollHorizontal: false // Set to true if your website scrolls horizontal instead of vertical.
 	});
 
-    var s = skrollr.init();
+    var s = skrollr.init({
+    	forceHeight: false,
+    	smoothScrolling: false
+    });
 
 	// Hamburger
 	var toggles = document.querySelectorAll(".c-hamburger");

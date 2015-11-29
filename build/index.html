@@ -29,11 +29,11 @@
                         </section>
                         <nav class="primary">
                             <menu class="main_nav">
-                                <li><a href="#" title="">About</a></li>
-                                <li><a href="#" title="">Visual Branding</a></li>
-                                <li><a href="#" title="">Travel</a></li>
-                                <li><a href="#" title="">Tourism</a></li>
-                                <li><a href="#" title="">Youth Culture</a></li>
+                                <li><a href="#edu" title="Visual Branding">Visual Branding</a></li>
+                                <li><a href="#travel" title="Travel">Travel</a></li>
+                                <li><a href="#tourism" title="Tourism">Tourism</a></li>
+                                <li><a href="#yc" title="Youth Culture">Youth Culture</a></li>
+                                <li><a href="#contact" title="Contact">Contact</a></li>
                             </menu>
                         </nav>
                     </header>
@@ -41,7 +41,10 @@
 
                 <!-- Hero -->
                 <section class="block hero">
-                    <div class="bg">
+                    <div class="bg"
+                        data-0="background-position:0px 0px;"
+                        data-500="background-position:0px -200px;"
+                    >
                         <div class="content_strip"
                             data-600-top="opacity: 1;" 
                             data-200-top="opacity: 0;"
@@ -61,10 +64,15 @@
                 <!-- Sidekick -->
                 <section class="block sidekick_vid">
                     <a href="#"><div class="vid_btn"></div></a>
-                    <div class="bg">
+                    <div class="bg"
+                        data-center="background-position: 50% 0px;"
+                        data-top-bottom="background-position: 50% -200px;"
+                    >
                         <div class="content_strip"
-                            data-bottom="opacity: 0;" 
-                            data-center-top="opacity: 1;"
+                            data--200-bottom="opacity: 0"
+                            data-center="opacity: 1"
+                            data-100-top="opacity: 1"
+                            data-10-top="opacity: 0"
                         >
                             <article class="entry">
                                 <header class="title_container">
@@ -83,18 +91,35 @@
                 </section>
 
                 <!-- Commision -->
-                <div class="section_block commision">
+                <div id="edu" class="section_block commision">
+                    <a name="edu"></a>
                     <section class="block sidekick_img">
-                        <div class="bg">
-                            <article class="entry">
+                        <div class="bg"
+                            data-center="background-position: 50% 0px;"
+                            data-top-bottom="background-position: 50% -200px;"
+                        >
+                            <article class="entry"
+                                data-bottom-top="opacity: 0"
+                                data--100-bottom="opacity: 0"
+                                data-center="opacity: 1"
+                            >
                                 <blockquote>
                                     <p><span>We know that a</span> <span><em>global education</em> is</span> <span>more important than</span><br/><span>ever.</span></p>
                                 </blockquote>
                             </article>
+                            <div class="curtain"
+                                data-bottom-top="opacity: 0"
+                                data-106-top="height: 1%; top: -10%; opacity: 0;"
+                                data-center="height: 100%; top: 0%; opacity: 0.2"
+                                data-anchor-target="#edu"
+                            ></div>
                         </div>
                     </section>
                     <section class="block content_entry">
-                        <div class="headings_container">
+                        <div class="headings_container"
+                            data-bottom="opacity: 0;" 
+                            data-300-top="opacity: 1;" 
+                        >
                             <h1 class="title">Commision: EDU</h1>
                             <div class="headings">
                                 <header class="title_container">
@@ -109,6 +134,7 @@
 
                                 <p>Leaving the winter of Himalayan Bhutan behind, I traveled to South East Asia, embedding into an education and humanitarian exchange unit seventeen days later and a terabyte heavier, i knew we had commercial success, yet couldn't shake the <a href="#">story</a></p>
 
+
                                 <div class="cats">
                                     <p>Village Portraits | Commercial Film | Cultural Visual Anthropology | EDU branding |</p>
                                 </div>
@@ -118,17 +144,27 @@
                                 </div>
                             </section>
                             <div class="img">
-                                <figure>
-                                    <img src="http://placehold.it/500x300" alt="">
+                                <figure class="map">
+                                    <img src="img/map_test.png" alt="">
+                                    <img src="img/map_line.png" alt=""
+                                        data-bottom="opacity: 0;" 
+                                        data-200-top="opacity: 1;"
+                                    >
+                                    
                                 </figure>
                             </div>
                         </article>
                     </section>
                     
                     <!-- excerpt -->
-                    <section class="excerpt">
+                    <section class="excerpt"
+                        data-bottom="opacity: 0;" 
+                        data-300-top="opacity: 1;"
+                    >
                         <article class="excerpt_entry">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quod, cum quaerat atque, optio possimus eos vel iste facilis natus ad, sapiente, fugit. Similique voluptatem nihil asperiores quam dicta.</p>
+
+
                         </article>
                     </section>
                 </div>
@@ -163,17 +199,40 @@
                 </section>
 
                 <!-- Travel -->
-                <div class="section_block commision travel">
+                <div id="travel" class="section_block commision travel">
+                    <a name="travel"></a>
                     <section class="block sidekick_img">
-                        <div class="bg">
+                        <div class="bg"
+                            data-center="background-position: 50% 0px;"
+                            data-top-bottom="background-position: 50% -200px;"
+                        >
+
+                            <div class="curtain"
+                                data-bottom-top="opacity: 0"
+                                data-106-top="height: 1%; top: -10%; opacity: 0;"
+                                data-center="height: 100%; top: 0%; opacity: 0.2"
+                                data-anchor-target="#travel"
+                            ></div>
                             <article class="entry">
                                 <div class="content">
-                                    <h3>Videos 
+                                    <h3
+                                       data-bottom-top="opacity: 0"
+                                       data--100-bottom="opacity: 0"
+                                       data-center-bottom="opacity: 1"
+                                       data-top="opacity: 1"
+                                       data--100-top="opacity: 0;"
+                                    >Videos 
                                         <span class="top">Increase</span>
                                         <span class="bot">People's Understanding</span>
                                     </h3>
 
-                                    <h4>75%
+                                    <h4
+                                        data-bottom-top="opacity: 0"
+                                        data--100-bottom="opacity: 0"
+                                        data-center-bottom="opacity: 1"
+                                        data-top="opacity: 1"
+                                        data--100-top="opacity: 0;"
+                                    >75%
                                         <span>Of your Product or Service</span>
                                     </h4>   
                                 </div>
@@ -182,7 +241,10 @@
                     </section>
 
                     <section class="block content_entry">
-                        <div class="headings_container">
+                        <div class="headings_container"
+                            data-bottom="opacity: 0;" 
+                            data-300-top="opacity: 1;"
+                        >
                             <h1 class="title">Commision: Travel</h1>
                             <div class="headings">
                                 <header class="title_container">
@@ -206,15 +268,23 @@
                                 </div>
                             </section>
                             <div class="img">
-                                <figure>
-                                    <img src="http://placehold.it/500x300" alt="">
+                                <figure class="map">
+                                    <img src="img/map_test.png" alt="">
+                                    <img src="img/map_line.png" alt=""
+                                        data-bottom="opacity: 0;" 
+                                        data-200-top="opacity: 1;"
+                                    >
+                                    
                                 </figure>
                             </div>
                         </article>
                     </section>
 
                     <!-- excerpt -->
-                    <section class="excerpt">
+                    <section class="excerpt"
+                        data-bottom="opacity: 0;" 
+                        data-300-top="opacity: 1;"
+                    >
                         <article class="excerpt_entry">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quod, cum quaerat atque, optio possimus eos vel iste facilis natus ad, sapiente, fugit. Similique voluptatem nihil asperiores quam dicta.</p>
                         </article>
@@ -233,11 +303,18 @@
                 </section>
 
                 <!-- Bhutan -->
-                <section class="block sidekick_img bhutan">
+                <section id="bhutan" class="block sidekick_img bhutan">
                     <div class="bg">
                         <article class="entry">
                             <div class="content">
-                                 <header>
+                                 <header
+                                    
+                                    data--50-bottom="opacity: 0" 
+                                    data-center="opacity: 1" 
+                                    data-206-top="opacity: 1" 
+                                    data-100-top="opacity: 0"
+                                    data-anchor-target="#bhutan header"
+                                 >
                                      <h3><span>hymln Brndng</span>Bhutan</h3>
                                  </header>
                             </div>
@@ -246,9 +323,13 @@
                 </section>
 
                 <!-- Tourism -->
-                <div class="section_block commision">
+                <div id="tourism" class="section_block commision">
+                    <a name="tourism"></a>
                     <section class="block sidekick_img tourism">
-                        <div class="bg">
+                        <div class="bg"
+                            data-center="background-position: 50% 0px;"
+                            data-top-bottom="background-position: 50% -200px;"
+                        >
                             <article class="entry">
                                 <div class="content">
                                     <blockquote>
@@ -256,12 +337,21 @@
                                     </blockquote>    
                                 </div>
                             </article>
+                            <div class="curtain"
+                                data-bottom-top="opacity: 0"
+                                data-106-top="height: 1%; top: -10%; opacity: 0;"
+                                data-center="height: 100%; top: 0%; opacity: 0.2"
+                                data-anchor-target="#tourism"
+                            ></div>
                         </div>
                     </section>
 
 
                     <section class="block content_entry">
-                        <div class="headings_container">
+                        <div class="headings_container"
+                            data-bottom="opacity: 0;" 
+                            data-300-top="opacity: 1;" 
+                        >
                             <h1 class="title">Commision: Tourism</h1>
                             <div class="headings">
                                 <header class="title_container">
@@ -288,15 +378,23 @@
 
                             </section>
                             <div class="img">
-                                <figure>
-                                    <img src="http://placehold.it/500x300" alt="">
+                                <figure class="map">
+                                    <img src="img/map_test.png" alt="">
+                                    <img src="img/map_line.png" alt=""
+                                        data-bottom="opacity: 0;" 
+                                        data-200-top="opacity: 1;"
+                                    >
+                                    
                                 </figure>
                             </div>
                         </article>
                     </section>
 
                     <!-- excerpt -->
-                    <section class="excerpt">
+                    <section class="excerpt"
+                        data-bottom="opacity: 0;" 
+                        data-300-top="opacity: 1;"
+                    >
                         <article class="excerpt_entry">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quod, cum quaerat atque, optio possimus eos vel iste facilis natus ad, sapiente, fugit. Similique voluptatem nihil asperiores quam dicta.</p>
                         </article>
@@ -332,15 +430,28 @@
                 </section>
 
                 <!-- Youth Culture -->
-                <div class="section_block commision">
+                <div id="yc" class="section_block commision">
+                    <a name="yc"></a>
                     <section class="block sidekick_img youthculture">
-                        <div class="bg">
+                        <div class="bg"
+                            data-center="background-position: 50% 0px;"
+                            data-top-bottom="background-position: 50% -200px;"
+                        >
+                            <div class="curtain"
+                                data-bottom-top="opacity: 0"
+                                data-106-top="height: 1%; top: -10%; opacity: 0;"
+                                data-center="height: 100%; top: 0%; opacity: 0.2"
+                                data-anchor-target="#yc"
+                            ></div>
                         </div>
                     </section>
 
 
                     <section class="block content_entry">
-                        <div class="headings_container">
+                        <div class="headings_container"
+                            data-bottom="opacity: 0;" 
+                            data-300-top="opacity: 1;" 
+                        >
                             <h1 class="title">Commision: Y.C.</h1>
                             <div class="headings">
                                 <header class="title_container">
@@ -366,15 +477,23 @@
 
                             </section>
                             <div class="img">
-                                <figure>
-                                    <img src="http://placehold.it/500x300" alt="">
+                                <figure class="map">
+                                    <img src="img/map_test.png" alt="">
+                                    <img src="img/map_line.png" alt=""
+                                        data-bottom="opacity: 0;" 
+                                        data-200-top="opacity: 1;"
+                                    >
+                                    
                                 </figure>
                             </div>
                         </article>
                     </section>
 
                     <!-- excerpt -->
-                    <section class="excerpt">
+                    <section class="excerpt"
+                        data-bottom="opacity: 0;" 
+                        data-300-top="opacity: 1;"
+                    >
                         <article class="excerpt_entry">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quod, cum quaerat atque, optio possimus eos vel iste facilis natus ad, sapiente, fugit. Similique voluptatem nihil asperiores quam dicta.</p>
                         </article>
@@ -389,6 +508,7 @@
                 </section>
 
                 <section class="block contact">
+                    <a name="contact"></a>
                     <div class="bg">
                         <div class="overlay"></div>
                         <article class="entry">
@@ -517,8 +637,8 @@
 		<!-- form scripts -->
 		<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 		<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js"></script>
-		<script src="vendor.js" ></script>
-		<script src="jqueryform.com.min.js" ></script>
+		<script src="js/vendor.js" ></script>
+		<script src="js/jqueryform.com.min.js" ></script>
 
 		<script src="js/plugins.min.js"></script>
 		<script src="js/app.min.js"></script>
