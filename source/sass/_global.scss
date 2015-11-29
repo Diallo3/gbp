@@ -19,7 +19,7 @@ p {
 
 .slide_item {
     .cta {
-        @include abs_pos($top: 60%, $right:20%);
+        @include abs_pos($top: 65%, $right: 10%);
         @include worksans(1em, normal, normal);
         border-left: 2px solid $brick-red;
         padding-left: 1.5em;

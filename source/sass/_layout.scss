@@ -74,10 +74,20 @@
                         }
                     }
                 }
+                .small_cats {
+                    text-transform: uppercase;
+                    margin-bottom: .5em;
+                    p {
+                        font-size: .9em;
+                    }
+                }
                 .cats {
                     border-bottom: 2px solid $oil;
                     margin-bottom: 1em;
                     padding-bottom: .5em;
+                }
+                .cat {
+                    color: $dodge-blu;
                 }
             }
             .img {
@@ -138,7 +148,7 @@
 
 .sidekick_vid {
     .bg {
-        background-image: url("#{$imgPath}/temp-bw-1.jpg");
+        background-image: url("#{$imgPath}/img_people.jpg");
 
     }
     .vid_btn {
@@ -184,8 +194,15 @@
 
 .sidekick_img {
     .bg {
-        background-image: url("#{$imgPath}/temp-bw-2.jpg");
+        background-image: url("#{$imgPath}/img_commission_edu.jpg");
 
+    }
+    &.travel {
+        .bg {
+            background-image: url("#{$imgPath}/img_commission_travel.jpg");
+
+            background-position: center bottom;
+        }
     }
     &.time_elapse {
         .bg {
@@ -195,19 +212,19 @@
     }
     &.bhutan {
         .bg {
-            background-image: url("#{$imgPath}/temp-2.jpg");
+            background-image: url("#{$imgPath}/img_bhutan.jpg");
 
         }
     }
     &.tourism {
         .bg {
-            background-image: url("#{$imgPath}/temp-5.jpg");
+            background-image: url("#{$imgPath}/img_commission_tourism.jpg");
 
         }
     }
     &.youthculture {
         .bg {
-            background-image: url("#{$imgPath}/img_commision_yc.jpg");
+            background-image: url("#{$imgPath}/img_commission_yc.jpg");
 
         }
     }
