@@ -3,51 +3,21 @@
 	@if $media == small {
 		@media only screen and (max-width: map-get($breakpoints,small) ) { @content; }
 	}
-	@else if $media == mediumdown {
+	@else if $media == mediumDown {
 		@media all and (max-width: map-get($breakpoints,medium)) { @content; }
 	}
 	@else if $media == medium {
-		@media all and (min-width: (map-get($breakpoints,small)+1) ) { @content; }
+		@media all and (min-width: (map-get($breakpoints,small)+1)) and (max-width: map-get($breakpoints,large)) { @content; }
 	}
-	@else if $media == largedown {
+	@else if $media == mediumUp {
+		@media all and (min-width: (map-get($breakpoints,small)+1)) { @content; }
+	}
+	@else if $media == largeDown {
 		@media all and (max-width: map-get($breakpoints,large)) { @content; }
 	}
 	@else if $media == large {
-		@media all and (min-width: (map-get($breakpoints,medium)+1) ) and (max-width: map-get($breakpoints,large)) { @content; }
+		@media all and (min-width: (map-get($breakpoints,large)+1) ) { @content; }
 	}
-}
-
-@mixin arrow($direction: down, $size: 20px, $color: #bada55) {
-	width: 0;
-	height: 0;
-
-
-	@if ($direction == 'left' or 'right') {
-		border-top: u($size) solid transparent;
-		border-bottom: u($size) solid transparent;
-
-		@if ($direction == 'left') {
-			border-right: u($size) solid $color;
-		}
-
-		@else if ($direction == 'right') {
-			border-left: u($size) solid $color;
-		}
-	}
-
-	@else if ($direction == 'up' or 'down') {
-		border-left: u($size) solid transparent;
-		border-right: u($size) solid transparent;
-
-		@if ($direction == 'up') {
-			border-bottom: u($size) solid $color;
-		}
-
-		@else if ($direction == 'down') {
-			border-top: u($size) solid $color;
-		}
-	}
-
 }
 
 // UNIT CONVERSION
@@ -105,19 +75,6 @@ $pixelBase : 16;
 	@return $list();
 
 }
-
-// THIS WILL MAKE A SPRITE FOR YOU!
-// @function sprite($image, $image-width, $image-height, $icon-width, $icon-height, $class) {
-// 	$width-iterations: $image-width / $icon-width;
-// 	$height-iterations: $image-height / $icon-height;
-
-// 	@for $i from 1 through $width-iterations {
-// 		.#{$class} {
-// 			background-image: $image;
-// 			background-position: 
-// 		}
-// 	}
-// }
 
 @mixin zero_out {
 	margin: 0;

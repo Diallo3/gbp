@@ -11,7 +11,7 @@
         include "inc-head.html"
 	</head>
 	<body class="home">
-        <a name="top"></a>
+        <div id="nav-anchor"></div>
 		<div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
 
@@ -27,12 +27,8 @@
 
                 <!-- time elapse -->
                 <section class="block sidekick_img time_elapse">
-                    <div class="bg">
-                        <article class="entry">
-                            <div class="content">
-                                 
-                            </div>
-                        </article>
+                    <div class="flex-video">
+                       <iframe width="1280" height="720" src="https://www.youtube.com/embed/1Bye__utzzk?rel=0&amp;showinfo=0&autoplay=1&loop=1&playlist=1Bye__utzzk" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </section>
 
@@ -45,11 +41,12 @@
                                     
                                     data--50-bottom="opacity: 0" 
                                     data-center="opacity: 1" 
-                                    data-206-top="opacity: 1" 
-                                    data-100-top="opacity: 0"
                                     data-anchor-target="#bhutan header"
                                  >
-                                     <h3><span>hymln Brndng</span>Bhutan</h3>
+                                    <h3>
+                                        <span class="sur">hymln Brndng<i></i></span>
+                                        Bhutan
+                                    </h3>
                                  </header>
                             </div>
                         </article>
@@ -63,25 +60,57 @@
                 include "inc-commision_yc.html"
 
 
-                <section class="block video">
+                <section class="block time_elapse">
                     <div class="flex-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/a2pu_xhBnzY" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/ktv6AE5tw5k?rel=0&amp;showinfo=0&autoplay=1&loop=1&playlist=yfZuKzv-fX0" frameborder="0" allowfullscreen></iframe>
                     </div>
+                    <!-- https://youtu.be/ktv6AE5tw5k -->
                 </section>
 
                 include "inc-form.html"
-
-                <!-- footer -->
-                <div class="footer_container">
-                    <footer class="main_footer"></footer>
+                
+                <!-- Reveal Modals begin -->
+                <div id="mobileNav" class="reveal-modal full" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
+                    <ul class="mobile_menu">
+                        <li><a href="#edu" class="mm">EDU</a></li>
+                        <li><a href="#travel" title="Travel" class="mm">Travel</a></li>
+                        <li><a href="#tourism" title="Tourism" class="mm">Tourism</a></li>
+                        <li><a href="#yc" title="Human Branding" class="mm">Human</a></li>
+                        <li><a href="#" data-reveal-id="secondModal" title="Contact Us">Contact</a></li>
+                    </ul>
+                    <div class="social">
+                        <ul class="social_list">
+                            <li><a href="https://www.instagram.com/globalbusinesspeople/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCYsE4zXFpCmc7DjKj5IAoIA" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a href="https://plus.google.com/b/107724285859081548895/107724285859081548895/about/p/pub?gmbpt=true&pageId=107724285859081548895&hl=en&_ga=1.259063117.635689072.1461457184" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                 </div>
 
-                   			
-      		
+                <div id="secondModal" class="reveal-modal full" data-reveal aria-labelledby="secondModalTitle" aria-hidden="true" role="dialog">
+                    include "inc-form.html"
+                    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                </div>
+
+                
+
+                <!-- Off Canvas Menu -->
+                <!-- <aside class="right-off-canvas-menu">
+                    <ul class="mobile_menu">
+                        <li><a href="#edu">EDU</a></li>
+                        <li><a href="#travel" title="">Travel</a></li>
+                        <li><a href="#tourism" title="">Tourism</a></li>
+                        <li><a href="#yc" title="">Human</a></li>
+                        <li><a href="#contact" title="">Contact</a></li>
+                    </ul>
+                </aside> -->
 
                 <a class="exit-off-canvas"></a>
             </div>
 		</div>
+        
+        include "inc-modals.html"
 
 		include "inc-scripts.html"
         

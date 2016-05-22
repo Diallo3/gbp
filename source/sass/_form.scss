@@ -1,8 +1,10 @@
 .contact {
+    height: auto;
+
     .bg {
         background-image: url("#{$imgPath}/img_contact.jpg");
 
-        padding: 6em 0 2em;
+        padding: 5em 0 3em;
         position: relative;
         .overlay {
             @include abs_pos($top: 0, $right: 0, $bottom: 0, $left: 0);
@@ -10,104 +12,47 @@
             z-index: -1;
         }
     }
-    .social {
-        @include grid-column(12);
-        padding: 2em 0;
-        .social_list {
-            @include clearfix();
-            @include inline_list();
-            @include centered_list();
-            li {
-                margin-right: 10px;
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-            a {
-                @include circle(50px, transparent);
-                color: $white;
-                font-size: 1.3em;
-                text-align: center;
-                border: 1px solid $white;
-                padding: .6em 0;
-                display: inline-block;
-                &:hover {
-                    color: $dodge-blu;
-                    background-color: $white;
-                }
-            }
-        }
-    }
-
     .title {
         @include worksans(em(60px), normal, 200);
         color: $white;
         line-height: 1;
         text-align: center;
         margin: 0;
-        span {
+        .top {
             @include worksans(em(6px), normal, 400);
+            margin-bottom: .3em;
             display: block;
         }
     }
 }
 
-.jf-form {
-    label {
-        margin-bottom: 5px;
-        max-width: 100%;
-        display: none;
-    }
+.cfgen-form-container {
+    color: $white;
+    margin-bottom: 2em;
+}
 
-    .form-group {
-        margin-bottom: 1.5em;
-        position: relative;
+label {
+    font-size: 0.8em;
+    @include bp(mediumUp) {
+        font-size: 1em;
     }
+}
 
-    .f_name, .f_email, .f_phone, .f_service {
-        @include bp(medium) {
-            @include grid-column(6);
-        }
-        @include grid-column(12);
-    }
+.cfgen-label {
+    display: none;
+}
 
-    .f_comment, .f_captcha, .submit {
-        @include grid-column(12);
-    }
-
-    .f_captcha {
-        .g-recaptcha {
-            margin: 0 auto;
-            width: 305px;
-        }
-    }
-
-    .submit {
-        text-align: center;
-        .btn {
-            color: $white;
-            text-transform: uppercase;
-            background: transparent;
-            border: 1px solid $white;
-            padding: 1em 2em;
-            display: inline-block;
-        }
-    }
-
-    .form-control {
+.cfgen-e-set {
+    input, textarea {
         @include placeholder {
-            color: $white;
+            color: white(.7);
         }
-        color: #555;
-        font-size: 14px;
-        line-height: 1.42857143;
+        color: $white;
         background-color: transparent;
-        background-image: none;
         border: 1px solid $white;
-        padding: 6px 12px;
+        margin-bottom: .8em;
+        padding: 1em;
         width: 100%;
-        height: 50px;
-        display: block;
 
         -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
              -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -120,68 +65,68 @@
         }
     }
 
-    .select_field {
-        border: 1px solid $white;
-        height: 50px;
-        position: relative;
-        &:before {
-            @include abs_pos($top: 15px, $right: 10px);
-            content: "\f107";
-            color: $white;
-            font-family: fontawesome;
+    .cfgen-option-checkbox {
+        @include bp(mediumUp) {
+            @include grid-column(4);
         }
-        .form-control {
-            color: $white;
-            border: 0;
-            border-radius: 0;
+        @include grid-column(6);
+        color: $white;
+        input {
+            margin-right: .5em;
+            width: auto;
+        }
+    }
+}
 
-            -webkit-appearance: none;
-            &:focus {
-                color: $base;
+.social {
+    @include grid-column(12);
+    padding: 2em 0;
+    .social_list {
+        @include clearfix();
+        @include inline_list();
+        @include centered_list();
+        li {
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
             }
         }
+        a {
+            @include circle(50px, transparent);
+            color: $white;
+            font-size: 1.3em;
+            text-align: center;
+            border: 1px solid $white;
+            padding: .6em 0;
+            display: inline-block;
+            &:hover {
+                color: $dodge-blu;
+                background-color: $white;
+            }
+        }
+        .fa {
+            position: relative;
+            top: -2px;
+        }
     }
 }
 
-.jf-option-box {
-    margin-left: 8px;
-    display: none;
-}
-
-.jf-hide {
-    display: none;
-}
-
-.jf-disabled {
-    background-color: #eee;
-
-    pointer-events: none;
-    opacity: .6;
-}
-
-.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
-    margin-top: 4px \9;
-    margin-left: 0;
-    position: absolute;
-}
-
-.error, .validation-error {
-    padding: 5px;
-}
-
-.error {
-    color: #a94442;
-    margin-top: 10px;
-}
-
-.server-error {
-    font-weight: bold;
-}
-
-.form-group.required {
-    &:before {
-        @include abs_pos($top: 30%, $right: 5%);
-        content: "*";
-        color: $brick-red;
+.submit_container {
+    text-align: center;
+    .cfgen-submit {
+        color: $white;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1px solid $white;
+        margin: 0 auto;
+        padding: 1em 2em;
     }
 }
+
+#formSmall {
+    padding: 1em;
+    @include bp(mediumUp) {
+        padding: 3em;
+    }
+}
+

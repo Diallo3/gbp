@@ -1,0 +1,4 @@
+<div class="bg"
+            data-center="background-position: 50% 0px;"
+            data-top-bottom="background-position: 50% -200px;"
+        >

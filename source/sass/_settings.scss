@@ -11,6 +11,7 @@ $breakpoints: (
 
 /* THEME SPECIFIC DEFS */
 $lt-gry: #c2c2c2;
+$med-gry: #777;
 $sage-blu: #608ec0;
 $dodge-blu: #7db1db;
 $royal-blue: #4599fb;
@@ -20,12 +21,36 @@ $brick-red: #ca6167;
 
 
 /* FONTS! */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:400,300,200,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:400,300,200,500,600,700,800|Raleway:200,300,400|Allerta:400);
+$opensans: "Open Sans", sans-serif;
 $worksans: "Work Sans", sans-serif;
+$raleway: "Raleway", sans-serif;
+$allerta: "Raleway", sans-serif;
+
+@mixin opensans($size, $style, $weight) {
+    font-family: $opensans;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+}
 
 
 @mixin worksans($size, $style, $weight) {
     font-family: $worksans;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin raleway($size, $style, $weight) {
+    font-family: $raleway;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin allerta($size, $style, $weight) {	
+    font-family: $allerta;
     font-size: $size;
     font-weight: $weight;
     font-style: $style;

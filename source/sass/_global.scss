@@ -8,6 +8,31 @@ p {
     }
 }
 
+.more {
+    font-size: em(12px);
+    text-transform: uppercase;
+    border: 1px solid $white;
+    padding: .3em .5em;
+    display: inline-block;
+}
+
+.ph-img-box {
+    img {
+        border: 1px solid lighten($lt-gry, 15%);
+    }
+}
+
+.surround {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+}
+
+.count {
+    display: inline-block;
+}
+
 .vid_btn {
     @include abs_pos($top: 0, $right: 0, $bottom: 0, $left: 0);
     @include center_block();
@@ -15,6 +40,19 @@ p {
     text-align: center;
     border: 1px solid white(.8);
     z-index: 2;
+
+    transition: all ease .3s;
+    &:before {
+        @include abs_pos($top: 20%, $left: 40%);
+        content: "\f04b";
+        color: $white;
+        font-family: "fontawesome";
+        font-size: 4em;
+    }
+    &:hover {
+        background-color: $royal-blue;
+        box-shadow: 0 0 10px black(.8);
+    }
 }
 
 .slide_item {
@@ -29,4 +67,44 @@ p {
             text-transform: uppercase;
         }
     }
+}
+
+.animated {
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.05);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
 }

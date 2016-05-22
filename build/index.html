@@ -10,14 +10,29 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/fv/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/fv/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/fv/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/fv/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/fv/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/fv/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/fv/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/fv/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/fv/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/fv/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/fv/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/fv/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/fv/favicon-16x16.png">
+        <link rel="manifest" href="img/fv/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="img/fv/ms-icon-144x144.png">
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.min.js"></script>
 	</head>
 	<body class="home">
-        <a name="top"></a>
+        <div id="nav-anchor"></div>
 		<div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
 
@@ -25,15 +40,24 @@
                 <div class="header_container">
                     <header class="main">
                         <section class="logo">
-                             <h1><a href="#">Nicholas A. Briggs</a></h1>  
+                            <h1>
+                                <a href="#">
+                                    <span class="title">Global Business People </span>
+                                    <span class="tag">Authentic Experiential Branding</span>
+                                </a>
+                            </h1>
                         </section>
                         <nav class="primary">
                             <menu class="main_nav">
-                                <li><a href="#edu" title="Visual Branding">Visual Branding</a></li>
+                                <li><a href="#edu" title="Visual Branding">Edu</a></li>
                                 <li><a href="#travel" title="Travel">Travel</a></li>
                                 <li><a href="#tourism" title="Tourism">Tourism</a></li>
-                                <li><a href="#yc" title="Youth Culture">Youth Culture</a></li>
+                                <li><a href="#yc" title="Youth Culture">Human</a></li>
                                 <li><a href="#contact" title="Contact">Contact</a></li>
+                            </menu>
+                            <menu class="mobile_nav">
+                                <!-- <a href="#" class="right-off-canvas-toggle"><i class="fa fa-bars"></i></a> -->
+                                <a href="#" data-reveal-id="mobileNav" class=""><i class="fa fa-bars"></i></a>
                             </menu>
                         </nav>
                     </header>
@@ -41,10 +65,7 @@
 
                 <!-- Hero -->
                 <section class="block hero">
-                    <div class="bg"
-                        data-0="background-position:0px 0px;"
-                        data-500="background-position:0px -200px;"
-                    >
+                    <div class="bg">
                         <div class="content_strip"
                             data-600-top="opacity: 1;" 
                             data-200-top="opacity: 0;"
@@ -53,7 +74,8 @@
                                 <header class="title_container">
                                     <h1 class="title">Stop working with companies...</h1>
                                     <h3 class="position">
-                                       13.3622 <sup>&deg;</sup> N, 103.8597 <sup>&deg;</sup> E
+                                       <span class="count">13.3622</span> <sup>&deg;</sup> N, 
+                                       <span class="count">103.8597</span> <sup>&deg;</sup> E
                                     </h3>
                                 </header>    
                             </article>
@@ -63,11 +85,8 @@
 
                 <!-- Sidekick -->
                 <section class="block sidekick_vid">
-                    <a href="#"><div class="vid_btn"></div></a>
-                    <div class="bg"
-                        data-center="background-position: 50% 0px;"
-                        data-top-bottom="background-position: 50% -200px;"
-                    >
+                    <a href="#" data-reveal-id="emVideo"><div class="vid_btn"></div></a>
+                    <div class="bg">
                         <div class="content_strip"
                             data--200-bottom="opacity: 0"
                             data-center="opacity: 1"
@@ -84,7 +103,8 @@
                         <article class="entry bottom" >
                             <h2 class="title"
                             data-bottom="opacity: 0;" 
-                            data-300-top="opacity: 1;"  
+                            data-400-top="opacity: 1; bottom: 60px;" 
+                            data-100-top="opacity: 1; bottom: -60px;"   
                             >People</h2>
                         </article>
                     </div>
@@ -94,25 +114,18 @@
                 <div id="edu" class="section_block commision">
                     <a name="edu"></a>
                     <section class="block sidekick_img">
-                        <div class="bg"
-                            data-center="background-position: 50% 0px;"
-                            data-top-bottom="background-position: 50% -200px;"
-                        >
+                        <div class="bg">
                             <article class="entry"
-                                data-bottom-top="opacity: 0"
-                                data--100-bottom="opacity: 0"
-                                data-center="opacity: 1"
+                                data-bottom="opacity: 0;"
+                                data-center="opacity: 1;"
                             >
                                 <blockquote>
-                                    <p><span>We know that a</span> <span><em>global education</em> is</span> <span>more important than</span><br/><span>ever.</span></p>
+                                    <p>
+                                        <span>We know that a</span> <span><em>global education</em> is</span> <span>more important than</span><br/><span>ever.</span>
+                                    </p>
                                 </blockquote>
                             </article>
-                            <div class="curtain"
-                                data-bottom-top="opacity: 0"
-                                data-106-top="height: 1%; top: -10%; opacity: 0;"
-                                data-center="height: 100%; top: 0%; opacity: 0.2"
-                                data-anchor-target="#edu"
-                            ></div>
+                            <div class="curtain"></div>
                         </div>
                     </section>
                     <section class="block content_entry">
@@ -124,49 +137,75 @@
                             <div class="headings">
                                 <header class="title_container">
                                     <h2 class="tag">Branding | Creative Direction | Photo | Video</h2>
-                                    <h3 class="position">13.3622 <sup>&deg;</sup> N, 103.8597 <sup>&deg;</sup> E | 6:34</h3>
+                                    <h3 class="position">
+                                        <span class="count">13.3622</span> <sup>&deg;</sup> N, 
+                                        <span class="count">103.8597</span> <sup>&deg;</sup> E | 6:34
+                                    </h3>
                                 </header>
                             </div>
                         </div>
                         <article class="entry">
                             <section class="content">
-                                <p>A Global education is one of the most profound experiences a student can have. By showing it visually and employing a well thought-out social strategy. It can become an evocation marketing campaign.</p>
+                                <p>A global education is one of the most profound experiences a student can have. By showing it visually and employing a well thought-out social strategy, it becomes an evocative marketing campaign.</p>
 
-                                <p>Leaving the winter of Himalayan Bhutan behind, I traveled to South East Asia, embedding into an education and humanitarian exchange unit seventeen days later and a terabyte heavier, i knew we had commercial success, yet couldn't shake the <a href="#">story</a></p>
+                                <div class="alt">
+                                    <p>LEAVING THE WINTER OF HIMALAYAN BHUTAN BEHIND, WE TRAVELED TO SOUTHEAST ASIA, EMBEDDING INTO AN EDUCATION AND HUMANITARIAN EXCHANGE UNIT. SEVENTEEN DAYS LATER AND A TERABYTE HEAVIER, WE KNEW OUR HAD COMMERCIAL SUCCESS, YET COULDN'T SHAKE THE STORY.</p>
+                                </div>
 
 
                                 <div class="cats">
-                                    <p>Village Portraits | <span class="cat">Commercial Film</span> | Cultural Visual Anthropology | EDU branding |</p>
+                                    <p>
+                                        <a href="javascript:;" class="cat ig" data-img-src="img/img_edu_1.jpg">Village Portraits</a> | 
+                                        <a href="javascript:;" class="vid" data-reveal-id="comVideo">Commercial Film</a> | 
+                                        <br><a class="cat ig" data-img-src="img/img_mr_edu.png">Market Research</a> | 
+                                        <a class="vid" data-reveal-id="eduVideo">EDU branding</a> |
+                                    </p>
                                 </div>
 
                                 <div class="cta">
-                                    <p>Brand your <span>Global Experience</span> <a href="#">here</a></p>
+                                    <p>Brand your <span>Global Experience</span> <a href="#" data-reveal-id="secondModal">here</a></p>
                                 </div>
                             </section>
                             <div class="img">
                                 <figure class="map">
-                                    <img src="img/map_test.png" alt="">
-                                    <img src="img/map_line.png" alt=""
+                                    <img src="img/map_test.png" class="world" alt="">
+                                    <img src="img/map_line.png" class="line" alt=""
                                         data-bottom="opacity: 0;" 
                                         data-200-top="opacity: 1;"
-                                    >
-                                    
+                                    >    
                                 </figure>
+                                <div class="img-ph">
+                                    <div class="ph-box-holder">
+                                        <figure id="eduBox" class="ph-box"></figure>
+                                    </div>
+                                </div>
                             </div>
+                            
                         </article>
                     </section>
                     
                     <!-- excerpt -->
+
+                    <a href="#" class="surround" target="_blank" data-reveal-id="eduStory">
                     <section class="excerpt"
-                        data-bottom="opacity: 0;" 
-                        data-300-top="opacity: 1;"
-                    >
+                            data-bottom="opacity: 0;" 
+                            data-300-top="opacity: 1;"
+                        >
+                        
                         <article class="excerpt_entry">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quod, cum quaerat atque, optio possimus eos vel iste facilis natus ad, sapiente, fugit. Similique voluptatem nihil asperiores quam dicta.</p>
+                            <header>
+                                <h3 class="excerpt_title">ADAPTIVE LEARNING: </h3>
+                            </header>
+                            <p>The fleeting moment of travel breathing life with every hilltop overcome, every smack of palm leaf to face, misty-eyed learners absorbing elements of experience that could never be instituted by way of powerpoint or projector.</p>
 
-
+                            <footer>
+                                <span class="more">Read More</span>
+                            </footer>
+                    
                         </article>
+                        
                     </section>
+                    </a>
                 </div>
 
 
@@ -175,52 +214,62 @@
 
                     <ul class="example-orbit" data-orbit>
                         <li class="slide_item">
-                            <div class="cta"><a href="#">Purchase License</a></div>
-                            <img src="img/temp-1.jpg" alt="" />
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide1_1.jpg" alt="Slideshow 1" />
                         </li>
                         <li class="slide_item">
-                            <div class="cta"><a href="#">Purchase License</a></div>
-                            <img src="img/temp-2.jpg" alt="" />
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide1_2.jpg" alt="Slideshow 2" />
                         </li>
                         <li class="slide_item">
-                            <div class="cta"><a href="#">Purchase License</a></div>
-                            <img src="img/temp-3.jpg" alt="" />
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide1_3.jpg" alt="Slideshow 3" />
+                        </li>
+                        <li class="slide_item">
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide1_4.jpg" alt="Slideshow 4" />
+                        </li>
+                        <li class="slide_item">
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide1_5.jpg" alt="Slideshow 5" />
+                        </li>
+                        <li class="slide_item">
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide1_6.jpg" alt="Slideshow 6" />
+                        </li>
+                        <li class="slide_item">
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide1_7.jpg" alt="Slideshow 7" />
                         </li>
 
                     </ul>
 
-                    <div class="content_strip">
+                    <!-- <div class="content_strip">
                         <article class="entry">
                             <div class="content">
                                <h5 class="title">Phnom Penh, Cambodia</h5> 
                             </div>    
                         </article>
-                    </div>
+                    </div> -->
                 </section>
 
                 <!-- Travel -->
                 <div id="travel" class="section_block commision travel">
-                    <a name="travel"></a>
+                    <a class="anchor_tag" name="travel"></a>
                     <section class="block sidekick_img travel">
-                        <div class="bg"
-                            data-center="background-position: 50% 0px;"
-                            data-top-bottom="background-position: 50% -200px;"
-                        >
+                        <div class="bg">
 
-                            <div class="curtain"
-                                data-bottom-top="opacity: 0"
-                                data-106-top="height: 1%; top: -10%; opacity: 0;"
-                                data-center="height: 100%; top: 0%; opacity: 0.2"
-                                data-anchor-target="#travel"
-                            ></div>
-                            <article class="entry">
+                            <div class="curtain"></div>
+                            <!-- <article class="entry">
                                 <div class="content">
                                     <h3
                                        data-bottom-top="opacity: 0"
-                                       data--100-bottom="opacity: 0"
-                                       data-center-bottom="opacity: 1"
-                                       data-top="opacity: 1"
-                                       data--100-top="opacity: 0;"
+                                       data--200-bottom="opacity: 0"
+                                       data-center-top="opacity: 1"
+                                       data-top="opacity: 1; position: fixed; top: 15%;"
+                                       data--100-top="opacity: 1;"
+                                       data--300-top="opacity: 1;"
+                                       data--800-top="opacity: 0;"
                                     >Videos 
                                         <span class="top">Increase</span>
                                         <span class="bot">People's Understanding</span>
@@ -229,14 +278,14 @@
                                     <h4
                                         data-bottom-top="opacity: 0"
                                         data--100-bottom="opacity: 0"
-                                        data-center-bottom="opacity: 1"
-                                        data-top="opacity: 1"
-                                        data--100-top="opacity: 0;"
+                                        data-center-top="opacity: 1"
+                                        data-top="opacity: 1; position: fixed; top: 40%;"
+                                        data--500-top="opacity: 0;"
                                     >75%
                                         <span>Of your Product or Service</span>
                                     </h4>   
                                 </div>
-                            </article>
+                            </article> -->
                         </div>
                     </section>
 
@@ -248,57 +297,74 @@
                             <h1 class="title">Commission: Travel</h1>
                             <div class="headings">
                                 <header class="title_container">
-                                    <h2 class="tag">Branding | Creative Direction | Photo | Video</h2>
-                                    <h3 class="position">13.3622 <sup>&deg;</sup> N, 103.8597 <sup>&deg;</sup> E</h3>
+                                    <h2 class="tag">Branding | Creative Direction | Guiding | Teaching | Photo | Video</h2>
+                                    <h3 class="position">
+                                        <span class="count">34.1526</span> <sup>&deg;</sup> N, 
+                                        <span class="count">77.5771</span> <sup>&deg;</sup> E
+                                    </h3>
                                 </header>
                             </div>
                         </div>
                         <article class="entry">
                             <section class="content">
-                                <p>Travelling into the far reaches of Northern India for half a year brought numerous challenges in branding, documenting, leading & teaching for a travel and cultural exchange company.</p>
+                                <p>Travelling into the far reaches of Northern India for half a year brought numerous challenges in branding, <span class="emp">documenting</span>, <span class="emp">leading</span> &amp; <span class="emp">teaching</span> for a travel and cultural exchange company.</p>
 
-                                <p>After spending a weekend with the nomadic people of Puga, Ladakh, India, we drove away in a blizzard with a feeling that we may never again see this receedin way of life.</p>
+                                <div class="alt">
+                                    <p>After spending a weekend with the nomadic people of Puga, Ladakh, India, we drove away in a blizzard with a feeling that we may never again see this receding way of life.</p>
+                                </div>
 
                                 <div class="cats">
-                                    <p>Study Abroad Guidance | <span class="cat">Documentary Film</span> | Cultural Visual Anthropology | <span class="cat">EDU branding</span> |</p>
+                                    <p>
+                                        <a href="javascript:;" class="cat_tvl ig" data-img-src="img/img_tvl_2.jpg">Study Abroad Guidance</a> | 
+                                        <a href="javascript:;" class="cat_tvl ig" data-img-src="img/img_tvl_1.jpg">Embedded Travel Branding</a> 
+                                        |<br><a href="javascript:;" class="cat_tvl ig" data-img-src="img/img_mr_tvl.png">Market Research</a> | 
+                                        <a class="vid" data-reveal-id="eduVideo">Immersive branding</a> |</p>
                                 </div>
 
                                 <div class="cta">
-                                    <p>Plan your Himalayan exeperience <a href="#">here</a></p>
+                                    <p>Plan your Himalayan experience <a href="#" data-reveal-id="secondModal">here</a></p>
                                 </div>
                             </section>
                             <div class="img">
                                 <figure class="map">
-                                    <img src="img/map_test.png" alt="">
-                                    <img src="img/map_line.png" alt=""
+                                    <img src="img/map_test.png" class="world" alt="">
+                                    <img src="img/map_line.png" class="line" alt=""
                                         data-bottom="opacity: 0;" 
                                         data-200-top="opacity: 1;"
-                                    >
-                                    
+                                    >    
                                 </figure>
+                                <div class="img-ph">
+                                    <div class="ph-box-holder">
+                                        <figure id="tvlBox" class="ph-box"></figure>
+                                    </div>
+                                </div>
                             </div>
                         </article>
                     </section>
 
                     <!-- excerpt -->
+                    <a href="#" class="surround" target="_blank" data-reveal-id="tvlStory">
                     <section class="excerpt"
                         data-bottom="opacity: 0;" 
                         data-300-top="opacity: 1;"
                     >
                         <article class="excerpt_entry">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quod, cum quaerat atque, optio possimus eos vel iste facilis natus ad, sapiente, fugit. Similique voluptatem nihil asperiores quam dicta.</p>
+                            <header>
+                                <h3 class="excerpt_title">NOT GOOGLABLE:</h3>
+                            </header>
+                            <p>She looks up as the sun peeks behind the Goliath peak and time stands still, a tension transferred; the last photo of the day.</p>
+                            <footer>
+                                <span class="more">Read More</span>
+                            </footer>
                         </article>
                     </section>
+                    </a>
                 </div>
 
                 <!-- time elapse -->
                 <section class="block sidekick_img time_elapse">
-                    <div class="bg">
-                        <article class="entry">
-                            <div class="content">
-                                 
-                            </div>
-                        </article>
+                    <div class="flex-video">
+                       <iframe width="1280" height="720" src="https://www.youtube.com/embed/1Bye__utzzk?rel=0&amp;showinfo=0&autoplay=1&loop=1&playlist=1Bye__utzzk" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </section>
 
@@ -311,11 +377,12 @@
                                     
                                     data--50-bottom="opacity: 0" 
                                     data-center="opacity: 1" 
-                                    data-206-top="opacity: 1" 
-                                    data-100-top="opacity: 0"
                                     data-anchor-target="#bhutan header"
                                  >
-                                     <h3><span>hymln Brndng</span>Bhutan</h3>
+                                    <h3>
+                                        <span class="sur">hymln Brndng<i></i></span>
+                                        Bhutan
+                                    </h3>
                                  </header>
                             </div>
                         </article>
@@ -326,23 +393,18 @@
                 <div id="tourism" class="section_block commision">
                     <a name="tourism"></a>
                     <section class="block sidekick_img tourism">
-                        <div class="bg"
-                            data-center="background-position: 50% 0px;"
-                            data-top-bottom="background-position: 50% -200px;"
-                        >
-                            <article class="entry">
+                        <div class="bg">
+                            <article class="entry"
+                                data-bottom-top="opacity: 0"
+                                data-center="opacity: 1" 
+                            >
                                 <div class="content">
                                     <blockquote>
                                         <p>The difference between a <strong>traveler</strong> and a <strong>tourist</strong> is great. Which <strong>one</strong> are you?</p>
                                     </blockquote>    
                                 </div>
                             </article>
-                            <div class="curtain"
-                                data-bottom-top="opacity: 0"
-                                data-106-top="height: 1%; top: -10%; opacity: 0;"
-                                data-center="height: 100%; top: 0%; opacity: 0.2"
-                                data-anchor-target="#tourism"
-                            ></div>
+                            <div class="curtain"></div>
                         </div>
                     </section>
 
@@ -355,56 +417,83 @@
                             <h1 class="title">Commission: Tourism</h1>
                             <div class="headings">
                                 <header class="title_container">
-                                    <h2 class="tag">Art Direction | Branding | Creative Direction & Consultation | Photo | Video</h2>
-                                    <h3 class="position">27.4333 <sup>&deg;</sup> N, 89.4167 <sup>&deg;</sup> E | 6:34</h3>
+                                    <h2 class="tag">Art Direction | Branding | Creative Direction &amp; Consultation | Instructing | Guiding | Photo | Video</h2>
+                                    <h3 class="position">
+                                        <span class="count">27.4333</span> <sup>&deg;</sup> N, 
+                                        <span class="count">89.4167</span> <sup>&deg;</sup> E | 6:34
+                                    </h3>
                                 </header>
                             </div>
                         </div>
                         <article class="entry">
                             <section class="content">
-                                <h4 class="cap">Travel Changes You</h4>
+                                <h4 class="cap">Travel Changes You.</h4>
 
                                 <p>Blistering cold stillness. Fingers numbed from exposures. Model as still as the night.</p>
 
                                 <p>Last minute frame.</p>
 
-                                <p>The following commisions are from numerous industries throughout the country.</p>
+                                <p>The following commissions are from numerous industries throughout the country.</p>
 
                                 <div class="small_cats">
-                                    <p><span class="cat">AIRLINE</span> | EDITORIAL | <span class="cat">FASHION</span> | HOSPITALITY | <span class="cat">NGO & NPO</span> | TRAVEL & TOURISM</p>
+                                    <p>
+                                        <a href="javascript:;" class="cat_tsm" data-img-src="img/img_tsm_airline_1.jpg">AIRLINE</a> | 
+                                        <a href="javascript:;" class="cat_tsm" data-img-src="img/img_tsm_editorial_1.jpg">EDITORIAL</a> | 
+                                        <a href="javascript:;" class="cat_tsm" data-img-src="img/img_tsm_fashion_1.jpg">FASHION</a> | 
+                                        <a href="javascript:;" class="cat_tsm" data-img-src="img/img_tsm_local_1.jpg">LOCAL</a> | 
+                                        <a href="javascript:;" class="cat_tsm" data-img-src="img/img_tsm_nonpro_1.jpg">NGO &amp; NPO</a> | 
+                                        <a href="javascript:;" class="cat_tsm" data-img-src="img/img_tsm_tvltsm_1.jpg">TRAVEL &amp; TOURISM</a>
+                                    </p>
                                 </div>
 
                                 <div class="cats">
-                                    <p>Village Portraits | <span class="cat">Commercial Travel Film</span> | Cultural Visual Anthropology | <span class="cat">Tourism Branding</span> |</p>
+                                    <p>
+                                        <a href="javascript:;" class="cat_tsm ig" data-img-src="img/img_tsm_2.jpg">Village Portraits</a> | 
+                                        <a href="javascript:;" class="cat_tsm ig" data-img-src="img/img_tsm_3.jpg">Local Stories</a> |
+                                        <br><a href="javascript:;" class="cat_tsm ig" data-img-src="img/img_mr_tsm.png">Market Research</a> | 
+                                        <a href="javascript:;" class="cat_tsm ig" data-img-src="img/img_tsm_1.jpg">Commercial Branding</a> |
+                                    </p>
                                 </div>
 
                                 <div class="cta">
-                                    <p>Brand your <span>Global Experience</span> <a href="#">here</a></p>
+                                    <p>Brand your <span>Global Experience</span> <a href="#" data-reveal-id="secondModal">here</a></p>
                                 </div>
 
                             </section>
                             <div class="img">
                                 <figure class="map">
-                                    <img src="img/map_test.png" alt="">
-                                    <img src="img/map_line.png" alt=""
+                                    <img src="img/map_test.png" class="world" alt="">
+                                    <img src="img/map_line.png" class="line" alt=""
                                         data-bottom="opacity: 0;" 
                                         data-200-top="opacity: 1;"
-                                    >
-                                    
+                                    >    
                                 </figure>
+                                <div class="img-ph">
+                                    <div class="ph-box-holder">
+                                        <figure id="tsmBox" class="ph-box"></figure>
+                                    </div>
+                                </div>
                             </div>
                         </article>
                     </section>
 
                     <!-- excerpt -->
+                    <a href="#" class="surround" target="_blank" data-reveal-id="tsmStory">
                     <section class="excerpt"
                         data-bottom="opacity: 0;" 
                         data-300-top="opacity: 1;"
                     >
                         <article class="excerpt_entry">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quod, cum quaerat atque, optio possimus eos vel iste facilis natus ad, sapiente, fugit. Similique voluptatem nihil asperiores quam dicta.</p>
+                            <header>
+                                <h3 class="excerpt_title">ATYPICAL TOURISM:</h3>
+                            </header>
+                            <p>We don’t do tourism branding... we climb up the mountain, write this copy on birchbark, then [re]brand through the human experience.</p>
+                            <footer>
+                                <span class="more">Read More</span>
+                            </footer>
                         </article>
                     </section>
+                    </a>
                 </div>
                 
                 <!-- Slideshow -->
@@ -412,43 +501,55 @@
 
                     <ul class="example-orbit" data-orbit>
                         <li class="slide_item">
-                            <div class="cta"><a href="#">Purchase License</a></div>
-                            <img src="img/temp-1.jpg" alt="" />
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide2_1.jpg" alt="" />
                         </li>
                         <li class="slide_item">
-                            <div class="cta"><a href="#">Purchase License</a></div>
-                            <img src="img/temp-2.jpg" alt="" />
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide2_2.jpg" alt="" />
                         </li>
                         <li class="slide_item">
-                            <div class="cta"><a href="#">Purchase License</a></div>
-                            <img src="img/temp-3.jpg" alt="" />
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide2_3.jpg" alt="" />
+                        </li>
+                        <li class="slide_item">
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide2_4.jpg" alt="" />
+                        </li>
+                        <li class="slide_item">
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide2_5.jpg" alt="" />
+                        </li>
+                        <li class="slide_item">
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide2_6.jpg" alt="" />
+                        </li>
+                        <li class="slide_item">
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide2_7.jpg" alt="" />
+                        </li>
+                        <li class="slide_item">
+                            <div class="cta"><a href="#" data-reveal-id="formPurchase">Purchase License</a></div>
+                            <img src="img/img_slide2_8.jpg" alt="" />
                         </li>
 
                     </ul>
 
-                    <div class="content_strip">
+                <!--     <div class="content_strip">
                         <article class="entry">
                             <div class="content">
-                               <h5 class="title">Phnom Penh, Cambodia</h5> 
+                               <h5 class="title">Somewhere on the planet</h5> 
                             </div>    
                         </article>
-                    </div>
+                    </div> -->
                 </section>
 
                 <!-- Youth Culture -->
                 <div id="yc" class="section_block commision">
                     <a name="yc"></a>
                     <section class="block sidekick_img youthculture">
-                        <div class="bg"
-                            data-center="background-position: 50% 0px;"
-                            data-top-bottom="background-position: 50% -200px;"
-                        >
-                            <div class="curtain"
-                                data-bottom-top="opacity: 0"
-                                data-106-top="height: 1%; top: -10%; opacity: 0;"
-                                data-center="height: 100%; top: 0%; opacity: 0.2"
-                                data-anchor-target="#yc"
-                            ></div>
+                        <div class="bg">
+                            <div class="curtain"></div>
                         </div>
                     </section>
 
@@ -458,193 +559,868 @@
                             data-bottom="opacity: 0;" 
                             data-300-top="opacity: 1;" 
                         >
-                            <h1 class="title">Commission: Y.C.</h1>
+                            <h1 class="title hb">Commission: Human</h1>
                             <div class="headings">
                                 <header class="title_container">
-                                    <h2 class="tag">Branding | Creative Direction | Photo | Video</h2>
-                                    <h3 class="position">42.3584 <sup>&deg;</sup> N, -71.0597 <sup>&deg;</sup> E | 11:32</h3>
+                                    <h2 class="tag">Branding | Creative Direction | Photo<br> | Sound Production | Video</h2>
+                                    <h3 class="position">
+                                        <span class="count">42.3601</span> <sup>&deg;</sup> N, 
+                                        -<span class="count">71.0589</span> <sup>&deg;</sup> W | 11:32</h3>
                                 </header>
                             </div>
                         </div>
                         <article class="entry">
                             <section class="content">
 
-                                <p>This generation is primed for growth. We care about humans and we understand our impact is both the path we leave behind and our ideal sense of self actualized into frution.</p>
+                                <p>Today’s world - that of rapidly shifting sociologic and economic environments - presents us a great deal of challenges. How do we stay relevant in a world of seamless sharing? What used to be corporate headshots are now profile pictures, social content extensions and six-second native brand advertisements.</p>
 
-                                <p>Continual expansion and present moment humanistsic documentarian capabilities translated into the minute and subtle nuances of Youth Culture. <br> View the<a href="#">film</a>.</p>
+                                <p>People are now far more than individuals searching for identity; they're the face of their own brands. Makers, crafters, Fortune 100 analysts, local artisans, creators alike, in today's world are voicing their ever-changing narratives.</p>
+
+                                <p>It's complex, yet at the core, it's all so simple.</p>
+
+                                <div class="alt">
+                                    <p>They told us, "if only I could go back, I would do it over. I'd take chances I was too afraid to take." What they didn't tell us, was how much fun they missed.</p>
+
+                                    <p>An idea can change the world. What's yours?</p>
+
+                                    <p>Start living.</p>
+
+                                    <p>~ G.B.P</p>
+                                </div>
 
                                 <div class="cats">
-                                    <p>Village Portraits | Commercial Film | Cultural Visual Anthropology | Tourism branding |</p>
+                                    <p>
+                                        <a href="javascript:;" class="cat_hb ig" data-img-src="img/img_hb_1.jpg">Portraiture</a> | 
+                                        <a href="javascript:;" class="vid" data-reveal-id="feVideo">From the Earth</a> |
+                                        <a href="javascript:;" class="vid" data-reveal-id="lfVideo">Lifestyle &amp; Fashion</a> |
+                                        <br><a href="javascript:;" class="cat_hb ig" data-img-src="img/img_mr_hmn.png">Market Research</a> | 
+                                        <a href="javascript:;" class="vid" data-reveal-id="audVideo">Auditory Branding</a> |
+                                    </p>
                                 </div>
 
                                 <div class="cta">
-                                    <p>Brand your <span>Human Experience</span> <a href="#">here</a></p>
+                                    <p>Brand your <span>Human Experience</span> <a href="#" data-reveal-id="secondModal">here</a></p>
                                 </div>
 
                             </section>
                             <div class="img">
                                 <figure class="map">
-                                    <img src="img/map_test.png" alt="">
-                                    <img src="img/map_line.png" alt=""
+                                    <img src="img/map_test.png" class="world" alt="">
+                                    <img src="img/map_line.png" class="line" alt=""
                                         data-bottom="opacity: 0;" 
                                         data-200-top="opacity: 1;"
-                                    >
-                                    
+                                    >    
                                 </figure>
+                                <div class="img-ph">
+                                    <div class="ph-box-holder">
+                                        <figure id="hbBox" class="ph-box"></figure>
+                                    </div>
+                                </div>
                             </div>
                         </article>
                     </section>
 
                     <!-- excerpt -->
+                    <a href="#" class="surround" target="_blank" data-reveal-id="hbStory">
                     <section class="excerpt"
                         data-bottom="opacity: 0;" 
                         data-300-top="opacity: 1;"
                     >
                         <article class="excerpt_entry">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quod, cum quaerat atque, optio possimus eos vel iste facilis natus ad, sapiente, fugit. Similique voluptatem nihil asperiores quam dicta.</p>
+                            <header>
+                                <h3 class="excerpt_title">THE HUMAN BRAND:</h3>
+                            </header>
+                            <p>Content Marketing is the new open road, and the signs leading the way are constantly changing.</p>
+                            <footer>
+                                <span class="more">Read More</span>
+                            </footer>
                         </article>
                     </section>
+                    </a>
                 </div>
 
 
-                <section class="block video">
+                <section class="block time_elapse">
                     <div class="flex-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/a2pu_xhBnzY" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/ktv6AE5tw5k?rel=0&amp;showinfo=0&autoplay=1&loop=1&playlist=yfZuKzv-fX0" frameborder="0" allowfullscreen></iframe>
                     </div>
+                    <!-- https://youtu.be/ktv6AE5tw5k -->
                 </section>
 
-                <section class="block contact">
+                <section id="contact" class="block contact">
                     <a name="contact"></a>
                     <div class="bg">
                         <div class="overlay"></div>
                         <article class="entry">
                             <header>
-                                <h1 class="title"><span>What were you thinking?</span>Connect with People</h1>
+                                <h1 class="title">
+                                    <span class="top">What were you thinking?</span>
+                                    <span class="animated pulse">Connect with People</span>
+                                </h1>
                             </header>
                             <div class="social">
                                 <ul class="social_list">
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.instagram.com/globalbusinesspeople/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCYsE4zXFpCmc7DjKj5IAoIA" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li><a href="https://plus.google.com/b/107724285859081548895/107724285859081548895/about/p/pub?gmbpt=true&pageId=107724285859081548895&hl=en&_ga=1.259063117.635689072.1461457184" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                                 </ul>
                             </div>
                             
                             <!-- form -->
-                            <div class="container jf-form">
-                                <form data-licenseKey="" name="jqueryform-29c4b7" id="jqueryform-29c4b7" action='form/  admin.php' method='post' enctype='multipart/form-data' novalidate autocomplete="on">
-                                    <input type="hidden" name="method" value="validateForm">
-                                    <input type="hidden" id="serverValidationFields" name="serverValidationFields" value="">
+                            <div class="cfgen-form-container" id="cfgen-form-1">
 
-                                    <!-- name -->
-                                    <div class="form-group f_name c1 required" data-cid="c1">
-                                        <label class="control-label" for="c1">Full Name</label>
-                                        <input type="text" class="form-control" id="c1" name="c1" value=""   placeholder="Full Name" data-rule-required="true"  />
-                                    </div>
+                                <div class="cfgen-form-content">
 
+                                    <div class="cfgen-e-c">
+                                        <div class="row">
+                                            <div class="columns small-12 medium-6">
+                                                <label class="cfgen-label" id="cfgen-element-1-7-label" ><span class="cfgen-label-value">Full Name</span><span class="cfgen-required">*</span></label>
 
-                                    <!-- email -->
-                                    <div class="form-group f_email c2 required" data-cid="c2">
-                                        <label class="control-label" for="c2">Email</label>
-                                        <input type="email" class="form-control" id="c2" name="c2" value=""  placeholder="Email Adress" data-rule-email="true" data-rule-required="true"  />
-                                    </div>
+                                                <div class="cfgen-e-set" id="cfgen-element-1-7-set-c">
+                                                    <div class="cfgen-input-group" id="cfgen-element-1-7-inputgroup-c">
+                                                        <div class="cfgen-input-c" id="cfgen-element-1-7-input-c">
+                                                            <input type="text" class="cfgen-type-text cfgen-form-value " name="cfgen-element-1-7" id="cfgen-element-1-7" placeholder="Full Name">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="columns small-12 medium-6">
+                                                <label class="cfgen-label" id="cfgen-element-1-6-label" ><span class="cfgen-label-value">Website</span><span class="cfgen-required">*</span></label>
 
+                                                <div class="cfgen-e-set" id="cfgen-element-1-6-set-c">
+                                                    <div class="cfgen-input-group" id="cfgen-element-1-6-inputgroup-c">
+                                                        <div class="cfgen-input-c" id="cfgen-element-1-6-input-c">
+                                                            <input type="text" class="cfgen-type-url cfgen-form-value " name="cfgen-element-1-6" id="cfgen-element-1-6" placeholder="Website">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="columns small-12 medium-6">
+                                                <label class="cfgen-label" id="cfgen-element-1-3-label" ><span class="cfgen-label-value">Email address</span><span class="cfgen-required">*</span></label>
 
-                                    <!-- phone -->
-                                    <div class="form-group f_phone c21 " data-cid="c21">
-                                        <label class="control-label" for="c21">Phone</label>
-                                        <input type="number" class="form-control" id="c21" name="c21" value="" placeholder="Phone IE: 555-123-4567" data-rule-number="true"  />
-                                    </div>
+                                                <div class="cfgen-e-set" id="cfgen-element-1-3-set-c">
+                                                    <div class="cfgen-input-group" id="cfgen-element-1-3-inputgroup-c">
+                                                        <div class="cfgen-input-c" id="cfgen-element-1-3-input-c">
+                                                            <input type="text" class="cfgen-type-email cfgen-form-value " name="cfgen-element-1-3" id="cfgen-element-1-3" placeholder="Email address">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="columns small-12 medium-6">
+                                                <label class="cfgen-label" id="cfgen-element-1-8-label" ><span class="cfgen-label-value">Phone</span></label>
 
-                                    <!-- services -->
-                                    <div class="form-group f_service c28 " data-cid="c28">
-                                        <label class="control-label" for="c28">Select</label>
-                                        <div class="select_field">
-                                            <select class="form-control " id="c28" name="c28"   >
-                                                <option selected value="- Select -">Select One</option>
-                                                <option value="Design Services">Design Services</option>
-                                                <option value="Video Production">Video Production</option>
-                                                <option value="Custom Photography">Custom Photography</option>
-                                                <option value="All Services">All Services</option>
-                                            </select>
+                                                <div class="cfgen-e-set" id="cfgen-element-1-8-set-c">
+                                                    <div class="cfgen-input-group" id="cfgen-element-1-8-inputgroup-c">
+                                                        <div class="cfgen-input-c" id="cfgen-element-1-8-input-c">
+                                                            <input type="text" class="cfgen-type-text cfgen-form-value " name="cfgen-element-1-8" id="cfgen-element-1-8" placeholder="Phone">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="columns small-12 medium-3">
+                                                <p>What are you looking for?</p>
+                                            </div>
+                                            <div class="columns small-12 medium-9">
+                                                <label class="cfgen-label" id="cfgen-element-1-9-label" ><span class="cfgen-label-value">What are you looking for?</span></label>
+
+                                                <div class="cfgen-e-set" id="cfgen-element-1-9-set-c">
+                                                    <div class="cfgen-input-group" id="cfgen-element-1-9-inputgroup-c">
+                                                        <div class="cfgen-option-set">
+                                                            <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                            <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-0" value="Website Design"><label for="cfgen-element-1-9-0">Website Design</label>
+                                                            </div>
+                                                            <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                            <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-1" value="Video"><label for="cfgen-element-1-9-1">Video</label>
+                                                            </div>
+                                                            <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                            <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-2" value="Photography"><label for="cfgen-element-1-9-2">Photography</label>
+                                                            </div>
+                                                            <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                            <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-3" value="Print"><label for="cfgen-element-1-9-3">Print</label>
+                                                            </div>
+                                                            <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                            <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-4" value="Branding"><label for="cfgen-element-1-9-4">Branding</label>
+                                                            </div>
+                                                            <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                            <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-5" value="Social"><label for="cfgen-element-1-9-5">Social</label>
+                                                            </div>
+                                                            <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                            <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-6" value="Creative"><label for="cfgen-element-1-9-6">Creative</label>
+                                                            </div>
+                                                            <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                            <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-7" value="Travel"><label for="cfgen-element-1-9-7">Travel</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="columns small-12">
+                                                <label class="cfgen-label" id="cfgen-element-1-4-label" ><span class="cfgen-label-value">What’s on your mind?</span></label>
+
+                                                <div class="cfgen-e-set" id="cfgen-element-1-4-set-c">
+                                                    <div class="cfgen-input-group" id="cfgen-element-1-4-inputgroup-c">
+                                                        <div class="cfgen-input-c" id="cfgen-element-1-4-input-c">
+                                                            <textarea class="cfgen-type-textarea cfgen-form-value " name="cfgen-element-1-4" id="cfgen-element-1-4" placeholder="What&rsquo;s on your mind? Describe your Project/Idea. Ask us anything."></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="columns small-12">
+                                                <div class="cfgen-input-c submit_container" id="cfgen-element-1-5-input-c">
+                                                    <input type="submit" class="cfgen-submit" name="cfgen-element-1-5" id="cfgen-element-1-5" value="Lets do This!">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-
-
-                                    <!-- comments -->
-                                    <div class="form-group f_comment c3 required" data-cid="c3">
-                                        <label class="control-label" for="c3">Comments</label>
-                                        <textarea class="form-control" id="c3" name="c3" rows="3"  placeholder="Questions or comments" data-rule-required="true" ></textarea> 
-                                    </div>
-
-                                    <!-- captcha -->
-                                    <div class='form-group f_captcha recaptcha'>
-                                        <script type="text/javascript">
-                                            function renderReCaptcha(){
-                                                var jfKey = '6Ldh_QkTAAAAAA1WdrF09PX4bYuZklOKqzAZ916H', // when form loaded from jqueryform.com
-                                                realKey = '6LeDbRATAAAAABCtE2LoY6JZDtKDcAC2k8DmVtCC',
-                                                theme = 'light',
-                                                key = -1 !== location.href.indexOf('jqueryform.com/') ? jfKey : realKey;
-                                                grecaptcha.render( document.getElementById('g-recaptcha'), {
-                                                  'sitekey' : key,
-                                                  'theme' : theme
-                                                });
-                                            };
-                                        </script>
-                                        <script src="https://www.google.com/recaptcha/api.js?hl=&onload=renderReCaptcha&render=explicit" async defer></script>
-                                        <div id='g-recaptcha' class='g-recaptcha col_field' data-theme='dark' data-sitekey='6LeDbRATAAAAABCtE2LoY6JZDtKDcAC2k8DmVtCC'></div>
-                                    </div>
-
-
-                                    <!-- submit -->
-                                    <div class="form-group submit">
-                                        <div class="progress" style="display: none; z-index: -1; position: absolute;">
-                                            <div class="progress-bar progress-bar-striped active" role="progressbar" style="width:100%"></div>
-                                        </div>
-                                        <button type="submit" class="btn" style="z-index: 1;">Lets do this!</button>
-                                        <p class="error bg-warning" style="display:none;">Please check the required fields.</p>
-                                    </div>
-
-                                </form>
-                            </div>
-
-                            <div class="container jf-thankyou" style="display:none;" data-redirect="" data-seconds="10">
-                                <h3>Your form has been submitted. Thank You!</h3>
+                                </div>
                             </div>
                             <!-- /form -->
+
+
                         </article>
+
+                        <div class="row">
+                            <div class="columns small-12">
+                                <section class="logo">
+                                    <h1>
+                                        <a href="#">
+                                            <span>Global Business People </span>
+                                        </a>
+                                    </h1>
+                                </section>
+                            </div>
+                        </div>
+                        
                     </div>
                 </section>
-
-                <!-- footer -->
-                <div class="footer_container">
-                    <footer class="main_footer"></footer>
+                
+                <!-- Reveal Modals begin -->
+                <div id="mobileNav" class="reveal-modal full" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
+                    <ul class="mobile_menu">
+                        <li><a href="#edu" class="mm">EDU</a></li>
+                        <li><a href="#travel" title="Travel" class="mm">Travel</a></li>
+                        <li><a href="#tourism" title="Tourism" class="mm">Tourism</a></li>
+                        <li><a href="#yc" title="Human Branding" class="mm">Human</a></li>
+                        <li><a href="#" data-reveal-id="secondModal" title="Contact Us">Contact</a></li>
+                    </ul>
+                    <div class="social">
+                        <ul class="social_list">
+                            <li><a href="https://www.instagram.com/globalbusinesspeople/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCYsE4zXFpCmc7DjKj5IAoIA" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a href="https://plus.google.com/b/107724285859081548895/107724285859081548895/about/p/pub?gmbpt=true&pageId=107724285859081548895&hl=en&_ga=1.259063117.635689072.1461457184" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                 </div>
 
-                   			
-      		
+                <div id="secondModal" class="reveal-modal full" data-reveal aria-labelledby="secondModalTitle" aria-hidden="true" role="dialog">
+                    <section id="contact" class="block contact">
+                        <a name="contact"></a>
+                        <div class="bg">
+                            <div class="overlay"></div>
+                            <article class="entry">
+                                <header>
+                                    <h1 class="title">
+                                        <span class="top">What were you thinking?</span>
+                                        <span class="animated pulse">Connect with People</span>
+                                    </h1>
+                                </header>
+                                <div class="social">
+                                    <ul class="social_list">
+                                        <li><a href="https://www.instagram.com/globalbusinesspeople/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="https://www.youtube.com/channel/UCYsE4zXFpCmc7DjKj5IAoIA" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li><a href="https://plus.google.com/b/107724285859081548895/107724285859081548895/about/p/pub?gmbpt=true&pageId=107724285859081548895&hl=en&_ga=1.259063117.635689072.1461457184" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- form -->
+                                <div class="cfgen-form-container" id="cfgen-form-1">
+
+                                    <div class="cfgen-form-content">
+
+                                        <div class="cfgen-e-c">
+                                            <div class="row">
+                                                <div class="columns small-12 medium-6">
+                                                    <label class="cfgen-label" id="cfgen-element-1-7-label" ><span class="cfgen-label-value">Full Name</span><span class="cfgen-required">*</span></label>
+
+                                                    <div class="cfgen-e-set" id="cfgen-element-1-7-set-c">
+                                                        <div class="cfgen-input-group" id="cfgen-element-1-7-inputgroup-c">
+                                                            <div class="cfgen-input-c" id="cfgen-element-1-7-input-c">
+                                                                <input type="text" class="cfgen-type-text cfgen-form-value " name="cfgen-element-1-7" id="cfgen-element-1-7" placeholder="Full Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="columns small-12 medium-6">
+                                                    <label class="cfgen-label" id="cfgen-element-1-6-label" ><span class="cfgen-label-value">Website</span><span class="cfgen-required">*</span></label>
+
+                                                    <div class="cfgen-e-set" id="cfgen-element-1-6-set-c">
+                                                        <div class="cfgen-input-group" id="cfgen-element-1-6-inputgroup-c">
+                                                            <div class="cfgen-input-c" id="cfgen-element-1-6-input-c">
+                                                                <input type="text" class="cfgen-type-url cfgen-form-value " name="cfgen-element-1-6" id="cfgen-element-1-6" placeholder="Website">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="columns small-12 medium-6">
+                                                    <label class="cfgen-label" id="cfgen-element-1-3-label" ><span class="cfgen-label-value">Email address</span><span class="cfgen-required">*</span></label>
+
+                                                    <div class="cfgen-e-set" id="cfgen-element-1-3-set-c">
+                                                        <div class="cfgen-input-group" id="cfgen-element-1-3-inputgroup-c">
+                                                            <div class="cfgen-input-c" id="cfgen-element-1-3-input-c">
+                                                                <input type="text" class="cfgen-type-email cfgen-form-value " name="cfgen-element-1-3" id="cfgen-element-1-3" placeholder="Email address">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="columns small-12 medium-6">
+                                                    <label class="cfgen-label" id="cfgen-element-1-8-label" ><span class="cfgen-label-value">Phone</span></label>
+
+                                                    <div class="cfgen-e-set" id="cfgen-element-1-8-set-c">
+                                                        <div class="cfgen-input-group" id="cfgen-element-1-8-inputgroup-c">
+                                                            <div class="cfgen-input-c" id="cfgen-element-1-8-input-c">
+                                                                <input type="text" class="cfgen-type-text cfgen-form-value " name="cfgen-element-1-8" id="cfgen-element-1-8" placeholder="Phone">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="columns small-12 medium-3">
+                                                    <p>What are you looking for?</p>
+                                                </div>
+                                                <div class="columns small-12 medium-9">
+                                                    <label class="cfgen-label" id="cfgen-element-1-9-label" ><span class="cfgen-label-value">What are you looking for?</span></label>
+
+                                                    <div class="cfgen-e-set" id="cfgen-element-1-9-set-c">
+                                                        <div class="cfgen-input-group" id="cfgen-element-1-9-inputgroup-c">
+                                                            <div class="cfgen-option-set">
+                                                                <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                                <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-0" value="Website Design"><label for="cfgen-element-1-9-0">Website Design</label>
+                                                                </div>
+                                                                <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                                <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-1" value="Video"><label for="cfgen-element-1-9-1">Video</label>
+                                                                </div>
+                                                                <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                                <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-2" value="Photography"><label for="cfgen-element-1-9-2">Photography</label>
+                                                                </div>
+                                                                <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                                <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-3" value="Print"><label for="cfgen-element-1-9-3">Print</label>
+                                                                </div>
+                                                                <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                                <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-4" value="Branding"><label for="cfgen-element-1-9-4">Branding</label>
+                                                                </div>
+                                                                <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                                <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-5" value="Social"><label for="cfgen-element-1-9-5">Social</label>
+                                                                </div>
+                                                                <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                                <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-6" value="Creative"><label for="cfgen-element-1-9-6">Creative</label>
+                                                                </div>
+                                                                <div class="cfgen-option-content cfgen-option-checkbox cfgen-element-1-9-option-content">
+                                                                <input type="checkbox" class="cfgen-form-value" name="cfgen-element-1-9" id="cfgen-element-1-9-7" value="Travel"><label for="cfgen-element-1-9-7">Travel</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="columns small-12">
+                                                    <label class="cfgen-label" id="cfgen-element-1-4-label" ><span class="cfgen-label-value">What’s on your mind?</span></label>
+
+                                                    <div class="cfgen-e-set" id="cfgen-element-1-4-set-c">
+                                                        <div class="cfgen-input-group" id="cfgen-element-1-4-inputgroup-c">
+                                                            <div class="cfgen-input-c" id="cfgen-element-1-4-input-c">
+                                                                <textarea class="cfgen-type-textarea cfgen-form-value " name="cfgen-element-1-4" id="cfgen-element-1-4" placeholder="What&rsquo;s on your mind? Describe your Project/Idea. Ask us anything."></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="columns small-12">
+                                                    <div class="cfgen-input-c submit_container" id="cfgen-element-1-5-input-c">
+                                                        <input type="submit" class="cfgen-submit" name="cfgen-element-1-5" id="cfgen-element-1-5" value="Lets do This!">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /form -->
+
+
+                            </article>
+
+                            <div class="row">
+                                <div class="columns small-12">
+                                    <section class="logo">
+                                        <h1>
+                                            <a href="#">
+                                                <span>Global Business People </span>
+                                            </a>
+                                        </h1>
+                                    </section>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                </div>
+
+                
+
+                <!-- Off Canvas Menu -->
+                <!-- <aside class="right-off-canvas-menu">
+                    <ul class="mobile_menu">
+                        <li><a href="#edu">EDU</a></li>
+                        <li><a href="#travel" title="">Travel</a></li>
+                        <li><a href="#tourism" title="">Tourism</a></li>
+                        <li><a href="#yc" title="">Human</a></li>
+                        <li><a href="#contact" title="">Contact</a></li>
+                    </ul>
+                </aside> -->
 
                 <a class="exit-off-canvas"></a>
             </div>
 		</div>
+        
+        <!-- edu -->
+        <div id="eduVideo" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="flex-video">
+        	    <iframe width="1280" height="720" src="https://www.youtube.com/embed/xeClqtbYO48?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <div id="tvlVideo" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="flex-video">
+        	    <iframe width="1280" height="720" src="https://www.youtube.com/embed/R3-RC9RC5_c" frameborder="0" allowfullscreen></iframe>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <div id="comVideo" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="flex-video">
+        	    <iframe width="1280" height="720" src="https://www.youtube.com/embed/obydpBiqOek?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <div id="eduStory" class="reveal-modal full story" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="article_container">
+        		<div class="row">
+        			<article class="columns small-centered small-12 medium-9">
+        				<header class="story_title">
+        					<h1 class="title">Adaptive Learning</h1>
+        					<h6 class="meta">April 2010. Puga, Ladakh. - India - Global Experiential Education</h6>
+        				</header>
+        		
+        				<p>While on assignments leading global experiential organizations, developing accredited courses, and producing award-winning commercial branding campaigns for educational clients around the world- over the course of a decade, numerous excerpts have been compiled into the following: </p>
+
+        				<figure class="featured">
+        					<img src="img/img_blog_edu1.jpg" alt="">
+        					<figcaption>Extension of Campaign - Bhutan, Oakland, Japan. [fpo]. 2014</figcaption>
+        				</figure>
+        		
+        				<p>Flying across the sea, assigned to produce a documentary film in the remote areas of ancient Sanskrit Buddhas and Bon Shamans, we find no glass skyscrapers, cell phone selfies, nor wifi hot-spots. The fleeting moment of travel breathing life with every hilltop overcome, every smack of palm leaf to face, misty-eyed learners absorbing elements of experience that could never be instituted by way of powerpoint or projector. </p>
+        		
+        				<p>Jumping out of the idling jeep, just 6 Kilometers from a Nomadic school in the Far East of Ladakh, with Gyaltsen, our Ladakhi translator, and international exchange students studying traditional living and alternative energy utilization in the rural Himalayas; we disembarked for the small settlement lying a few hundred metres ahead.</p>
+
+        				<p>The culmination of the need for new generations of Nomads to be able to compete in today's educational standards, and the allure of the newly formed world of convenience has created an influx of Nomadic refugees into cities like Leh (the capital of Ladakh), and surrounding settlements like Choglamsar.</p>
+
+        				<p>Standing mid conversation with a leather faced Ladakhi man, he’s trying to explain to us why Bob Dylan’s “Blowing in the Wind” is the greatest American rock song. We give the typical half nod of India – whether it means yes or no, we still have not the slightest inclination. As our heads return to their balanced position between aching, arching shoulder blades, we spot a golden reflection off in the vast distance. </p>
+
+        				<figure class="featured">
+        					<img src="img/img_blog_edu2.jpg" alt="">
+        					<figcaption>Extension of Campaign - Bhutan, Oakland, Japan. [fpo]. 2014</figcaption>
+        				</figure>
+
+        				<p>Trying to remain unbiased to these effects of modernization and globalization, it’s similar to when we studied television's impact in Bhutan.</p>
+
+        				<blockquote>
+        					<p>"When home, I watch twelve hours (of TV) a day in the summer," said Dawa, a 19 year-old, second-year computer student. "This is not uncommon for children my age. The television has even caused problems between our family members over what programs to watch."</p>
+        				</blockquote>
+
+        				<p>Interviewing college students from Sherubtse College in Bhutan, we asked about how television had changed the country since its arrival in 2001. The most common answer was that it had greatly impacted the people of Bhutan. Back in Ladakh, we found similar answers to slightly different situations.</p>
+
+        				<blockquote>
+        					<p>"We have a problem in the Nomadic way of life," states Dolma, a mother living in a Nomadic region of Ladakh. "Our children go to school to get educated, but they either do not complete their studies, and become laborers in the city, or if they succeed they don't come back." </p>
+        				</blockquote>
+
+
+
+        				<footer>
+        					<p>Contact <a data-reveal-id="formSmall"><strong><em>Alice</em></strong></a> if you have a story that needs to be told. 
+        					<em class="date">2016 <span>|</span> Education 01 <span>|</span> GBP</em></p>
+
+        					<div class="footnote">
+        						<p><small>Education is far beyond a classroom in today’s ever-revolving world. Embracing the pursuit of knowledge is a lifelong experience. Your stories are the inspiration for the next wave of change. The new traditional student, is last year’s non-traditional. Challenge adaptive learning, and strive for cultural agility in your educational brand.</small></p>
+        					</div>
+        				</footer>
+
+        			</article>
+        		</div>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <!-- travel -->
+        <div id="tvlStory" class="reveal-modal full story" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="article_container">
+        		<div class="row">
+        			<article class="columns small-centered small-12 medium-9">
+        				<header class="story_title">
+        					<h1 class="title">Not Googlable</h1>
+        					<h6 class="meta">April 2010. Puga, Ladakh. - India - Travel &amp; Discover</h6>
+        				</header>
+        		
+        				<p>While on assignments leading global experiential organizations, developing accredited courses on Media Literacy, Cultural Visual Media, and Buddhism, and directing/ producing award-winning commercial branding campaigns for educational clients in remote areas around the world- over the course of a decade, numerous excerpts have been compiled into the following:</p>
+
+        				<figure class="featured">
+        					<img src="img/img_blog_tvl1.jpg" alt="">
+        					<figcaption>Jetsin Rinchhen. Airline Stewardess. Bhutan. 2015</figcaption>
+        				</figure>
+        		
+        				<p>The road was barely lit as we bumped corner to corner inside the small Maruti. Traveling from the ancient ruins sitting high overlooking the Paro valley, the sun setting, a waning reminder of the impermanence of our stay here and the gravitas of the decreasing light. The freedom of the fleeting moment and the beauty of every turn, an adrenaline laden injection for the traveler’s soul.</p>
+
+        				<p>A last glimpse, beauty on the hillside. The Himalayas giving us one more defining moment, embracing our liminal stay and our eternal desire to stay. She looks up as the sun peeks behind the Goliath peak and time stands still, a tension transferred; the last photo of the day. </p>
+
+        				<p>Surrounded by the calls of Himalayan Pashmina Goats, analytics far from the measure of success, we threw our arms around the old man and humbly felt smiles unravel from dusty lips. Our translator snapped a photo and we gave thanks, then departed from the Nomadic settlement. </p>
+
+        				<figure class="featured">
+        					<img src="img/img_blog_tvl2.jpg" alt="">
+        					<figcaption>Off the Grid [Panoramic]. Bhutan. OIB Travel. 2015</figcaption>
+        				</figure>
+
+        				<blockquote>
+        					<p>"Education is very important now-a-days. It is difficult to keep the Nomads Nomadic," says Tsering Phuntsok, a 67 year-old Nomad with 300 sheep and goats, and 30 yaks. "The children are greatly affected when they see TV, cars and modern life. It creates a desire for them. I’m upset at the balance of education and the Nomadic way of life. If a family has enough children then maybe they can continue this lifestyle."</p>
+        				</blockquote>
+
+        				<p>Leaving our computers behind - in effort to understand the repercussions education’s created in the Nomadic world - we headed far from the urban noise of Delhi: </p>
+
+        				<p>[Strategic Embedded Market Research]: out of thirteen eleven-year olds whom questioned where they would like to be in the future, ten - over three quarters of them- stated that they wanted to live in Leh, or another city. Half stated they had parents who already had left the Nomadic life, and moved towards a more convenient life in the urban areas.</p>
+
+        				<blockquote>
+        					<p>"The children used to come back to see the family for vacation from school, but today they don't come back," states Phuntsok. "I’m not happy with the children not coming back. We need the educated ones to come back and help our traditional Nomadic roots. Then maybe I can be happy."  </p>
+        				</blockquote>
+
+        				<p>We often contemplate the effect we have on the world around us, but how was it that education could be to blame for an increase in Nomadic family disruption? It wasn’t until travel made us reimagine what we considered to be concrete, did we see how multi-faceted life and education truly are. </p>
+
+        				<footer>
+        					<p>Contact <a data-reveal-id="formSmall"><strong><em>Alice</em></strong></a> if you have a story that needs to be told. 
+        					<em class="date">2016 <span>|</span> Travel 01 <span>|</span> GBP</em></p>
+
+        					<div class="footnote">
+        						<p><small>Traveling places you outside of your world, and opens your eyes to the challenge that is universal dialogue. Market research does not have to mean stuffy tables and mini waters. It means dropping your bags at the gate, attempting to speak in common tongue, and embracing your senses. Travel beyond the brochure.</small></p>
+        					</div>
+        				</footer>
+
+        			</article>
+        		</div>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <!-- tourism -->
+        <div id="tsmStory" class="reveal-modal full story" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="article_container">
+        		<div class="row">
+        			<article class="columns small-centered small-12 medium-9">
+        				<header class="story_title">
+        					<h1 class="title">Atypical Tourism</h1>
+        					<h6 class="meta">September 2014. Phuket, Thailand. - Bhutan and Maine - Tourism</h6>
+        				</header>
+        		
+        				<p>While on assignments leading global experiential organizations, developing accredited courses on Media Literacy, Cultural Visual Media, and Buddhism, and directing/ producing award-winning commercial branding campaigns for educational clients in remote areas of the world- over the course of a decade, numerous excerpts have been compiled into the following:</p>
+
+        				<figure class="featured">
+        					<img src="img/img_blog_tsm1.jpg" alt="">
+        					<figcaption>“A Glimpse into Bhutan” - [Editorial, Fashion, Lifestyle, Airline] Bhutan. Tourism. 2015</figcaption>
+        				</figure>
+        		
+        				<p>Day 7: Traversing 1600 km in seven days, planning eighteen months for this moment; defining identity for key stakeholders, developing strategic direction, identifying countries of interest, and sourcing tickets, all for the unknown of the story and the potential the challenge has to change the narrative.</p>
+
+        				<p>Looking back we think aloud, “Why do we go out and search stranger’s faces for portraits, why the need to harness simplicity for otherwise convoluted messages? Why can’t we sleep if we haven’t created for a purpose?”</p>
+
+        				<p>We remember what it means to be human, the means to tell a story; a video camera does not distinguish the integrity of one’s life narrative, nor does a neutral density filter block out the cliché jargon of the past twenty years of advertising. Seeking adventure, reigniting the child in us all, sourcing creativity while shining a light through the current media marketing landscape; that’s why we’re here.</p>
+
+        				<figure class="featured">
+        					<img src="img/img_blog_tsm2.jpg" alt="">
+        					<figcaption>Bill Spiller - Spiller’s Farm. [Copywriting / Online Video / Campaign Direction] b. good. Maine. 2014</figcaption>
+        				</figure>
+
+        				<p>Formulaic analytics drives our world, and by measuring attention in impressions and ‘likes’, we simplify the process of creation. Myopathy found in the ‘templatation of data’ and the passé nature of customization, never has it been so primed for a world of personalization. </p>
+
+        				<p>We don’t do tourism branding... we climb up the mountain, write this copy on birchbark, then [re]brand through the human experience. A late night photo and video shoot in a remote and very serene valley led us to our moment of clarity.</p>
+
+        				<p>Documenting some of the finest traditional weaving, traveling around the world for a story you believe in- that’s impactful. It's not about branding or advertising, analytics or search engine optimization; it's all for the moments you hadn’t planned for. It's all for the instant you stop the scroll, and appreciate life. </p>
+
+        				<p>Rugged rural roads revolve this planet, and we search for the stories that we’re drawn to inherently.</p>
+
+        				<p>Day 8.</p>
+
+        				<footer>
+        					<p>Contact <a data-reveal-id="formSmall"><strong><em>Alice</em></strong></a> if you have a story that needs to be told. 
+        					<em class="date">2016 <span>|</span> Tourism 01 <span>|</span> GBP</em></p>
+
+        					<div class="footnote">
+        						<p><small>Tourism Branding is simple; nights sleeping in far-reaching areas of remote towns in effort to scout the perfect location for the state campaign, the crunch-time studying of remote languages, the cultural agility to find the local subjects that exemplify what authenticity means to the country, while having as small of an external influence as possible...right? </small></p>
+        						
+        						<p><small>Travel with care, express the purpose that connects both parties. Far beyond the photo, we found the pre-production, conceptualization, help, luck, and serendipity, simply in the connection.</small></p>
+        					</div>
+        				</footer>
+
+        			</article>
+        		</div>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <!-- human branding -->
+        <div id="hbStory" class="reveal-modal full story" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="article_container">
+        		<div class="row">
+        			<article class="columns small-centered small-12 medium-9">
+        				<header class="story_title">
+        					<h1 class="title">The Human Brand</h1>
+        					<h6 class="meta">March 2016. Boston, MA. - United States Of America - Human</h6>
+        				</header>
+        		
+        				<p>While on assignments leading global experiential organizations, developing accredited courses on Media Literacy, Cultural Visual Media, and Buddhism, and directing/ producing award-winning commercial branding campaigns for educational clients in remote areas around the world- over the course of a decade, numerous excerpts have been compiled into the following:</p>
+
+        				<figure class="featured">
+        					<img src="img/img_blog_hb1.jpg" alt="">
+        					<figcaption>Amy Qiu - Boston, MA. Financial Analyst. 2016</figcaption>
+        				</figure>
+        		
+        				<p>What does it mean to be human, when everyday we’re rewriting what being human means? We fast-track our day accomplishing as much as we can, all while staying as connected as possible to the ones that matter most. Resumes are now profile pages, and profiles are quickly becoming ambient videos and a brand. </p>
+
+
+        				<figure class="featured">
+        					<img src="img/img_blog_hb2.jpg" alt="">
+        					<figcaption>Alice Crane - Boston, MA. Global Business Executive. 2016</figcaption>
+        				</figure>
+
+        				<p>Content Marketing is the new open road, and the signs leading the way are constantly changing. Today, by being online you’ve built a brand, and if you’re representing a brand, you know how important it is to stay human, authentic, and relevant. </p>
+
+        				<figure class="featured">
+        					<img src="img/img_blog_hb3.jpg" alt="">
+        					<figcaption>Name Withheld, Displaced from Home. 2014</figcaption>
+        				</figure>
+
+        				<p>Whether you’re a Fortune 100 pharmaceutical company searching for the way to connect your annual summary to both your key stakeholders, and to the very people your mission statement represents, or an entrepreneur looking for the right visuals and underlying diverse and consistent brand message- you must dialogue with your audience, not to them.</p>
+
+        				<footer>
+        					<p>Contact <a data-reveal-id="formSmall"><strong><em>Alice</em></strong></a> if you have a story that needs to be told. 
+        					<em class="date">2016 <span>|</span> Human 01 <span>|</span> GBP</em></p>
+
+        					<div class="footnote">
+        						<p><small>Advertising changes global perception, however, it also lags behind its own ideals. Be more human, find your story and express your brand. Today your audience is you, and they are buying beyond the brand.</small></p>
+        					</div>
+        				</footer>
+
+        			</article>
+        		</div>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <div id="emVideo" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="flex-video">
+        	    <iframe width="1280" height="720" src="https://www.youtube.com/embed/_2e7sYbJCgA" frameborder="0" allowfullscreen></iframe>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <div id="feVideo" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="flex-video">
+        	    <iframe width="1280" height="720" src="https://www.youtube.com/embed/QGKn95nqc2k" frameborder="0" allowfullscreen></iframe>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <div id="lfVideo" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="flex-video">
+        	    <iframe width="1280" height="720" src="https://www.youtube.com/embed/X-phN7jITb4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <div id="audVideo" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="flex-video">
+        	    <iframe width="1280" height="720" src="https://www.youtube.com/embed/uMJGoRPVPvk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <!-- small form -->
+        <div id="formSmall" class="reveal-modal full story" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="row">
+        		<div class="columns small-10 small-centered">
+        			<article class="entry">
+        			        <header>
+        			            <h2>Contact Us</h2>
+        			        </header>
+        			</article>
+        			<div class="cfgen-form-container" id="cfgen-form-small">
+        				<div class="cfgen-form-content">
+        			
+        					<div class="cfgen-e-c">
+        			
+        						<label class="cfgen-label" id="cfgen-element-1-3-label" ><span class="cfgen-label-value">Email address</span><span class="cfgen-required">*</span></label>
+        			
+        						<div class="cfgen-e-set" id="cfgen-element-1-3-set-c">
+        							<div class="cfgen-input-group" id="cfgen-element-1-3-inputgroup-c">
+        								<div class="cfgen-input-c" id="cfgen-element-1-3-input-c">
+        									<input type="text" class="cfgen-type-email cfgen-form-value " name="cfgen-element-1-3" id="cfgen-element-1-3" placeholder="Enter Email Address">
+        								</div>
+        							</div>
+        						</div>
+        			
+        						<div class="cfgen-clear"></div>
+        			
+        					</div>
+        			
+        			
+        					<div class="cfgen-e-c">
+        			
+        						<label class="cfgen-label" id="cfgen-element-1-4-label" ><span class="cfgen-label-value">Your message</span></label>
+        			
+        						<div class="cfgen-e-set" id="cfgen-element-1-4-set-c">
+        							<div class="cfgen-input-group" id="cfgen-element-1-4-inputgroup-c">
+        								<div class="cfgen-input-c" id="cfgen-element-1-4-input-c">
+        									<textarea class="cfgen-type-textarea cfgen-form-value " name="cfgen-element-1-4" id="cfgen-element-1-4" placeholder="What&rsquo;s on your mind?"></textarea>
+        								</div>
+        							</div>
+        						</div>
+        			
+        						<div class="cfgen-clear"></div>
+        			
+        					</div>
+        			
+        			
+        					<div class="cfgen-e-c">
+        			
+        						<div class="cfgen-e-set" id="cfgen-element-1-5-set-c">
+        							<div class="cfgen-input-group" id="cfgen-element-1-5-inputgroup-c">
+        								<div class="cfgen-input-c" id="cfgen-element-1-5-input-c">
+        									<input type="submit" class="cfgen-submit" name="cfgen-element-1-5" id="cfgen-element-1-5" value="Send">
+        								</div>
+        							</div>
+        						</div>
+        			
+        					</div>
+        			
+        			
+        					<div class="cfgen-loading"></div>
+        			
+        				</div><!-- cfgen-form-content -->
+        			</div><!-- cfgen-form-container --></div>
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <!-- small form -->
+        <div id="formPurchase" class="reveal-modal full story" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        	<div class="row">
+        		<div class="columns small-10 small-centered">
+        			<article class="entry">
+        			        <header>
+        			            <h2>Purchase License</h2>
+        			            <p>To request a license for this photo, please indicate the potential usage(option for them to write) and your email (option for them to write), and we will respond to you.</p>
+        			        </header>
+        			</article>
+        			<div class="cfgen-form-container" id="cfgen-form-3">
+
+        				<div class="cfgen-form-content">
+
+        					<div class="cfgen-e-c">
+
+        						<label class="cfgen-label" id="cfgen-element-3-6-label" ><span class="cfgen-label-value">Image</span><span class="cfgen-required">*</span></label>
+
+        						<div class="cfgen-e-set" id="cfgen-element-3-6-set-c">
+        							<div class="cfgen-input-group" id="cfgen-element-3-6-inputgroup-c">
+        								<div class="cfgen-input-c" id="cfgen-element-3-6-input-c">
+        									<input type="text" class="cfgen-type-text cfgen-form-value " name="cfgen-element-3-6" id="cfgen-element-3-6" placeholder="Which Image are you requesting?">
+        								</div>
+        							</div>
+        						</div>
+
+        					</div>
+
+
+        					<div class="cfgen-e-c">
+
+        						<label class="cfgen-label" id="cfgen-element-3-3-label" ><span class="cfgen-label-value">Email address</span><span class="cfgen-required">*</span></label>
+
+        						<div class="cfgen-e-set" id="cfgen-element-3-3-set-c">
+        							<div class="cfgen-input-group" id="cfgen-element-3-3-inputgroup-c">
+        								<div class="cfgen-input-c" id="cfgen-element-3-3-input-c">
+        									<input type="text" class="cfgen-type-email cfgen-form-value " name="cfgen-element-3-3" id="cfgen-element-3-3" placeholder="Enter Email Address">
+        								</div>
+        							</div>
+        						</div>
+
+        					</div>
+
+
+        					<div class="cfgen-e-c">
+
+        						<label class="cfgen-label" id="cfgen-element-3-4-label" ><span class="cfgen-label-value">Your message</span></label>
+
+        						<div class="cfgen-e-set" id="cfgen-element-3-4-set-c">
+        							<div class="cfgen-input-group" id="cfgen-element-3-4-inputgroup-c">
+        								<div class="cfgen-input-c" id="cfgen-element-3-4-input-c">
+        									<textarea class="cfgen-type-textarea cfgen-form-value " name="cfgen-element-3-4" id="cfgen-element-3-4" placeholder="Any additional questions or requests?"></textarea>
+        								</div>
+        							</div>
+        						</div>
+
+        					</div>
+
+
+        					<div class="cfgen-e-c">
+
+        						<div class="cfgen-e-set" id="cfgen-element-3-5-set-c">
+        							<div class="cfgen-input-group" id="cfgen-element-3-5-inputgroup-c">
+        								<div class="cfgen-input-c" id="cfgen-element-3-5-input-c">
+        									<input type="submit" class="cfgen-submit" name="cfgen-element-3-5" id="cfgen-element-3-5" value="Send">
+        								</div>
+        							</div>
+        						</div>
+
+        					</div>
+
+
+        					<div class="cfgen-loading"></div>
+
+        				</div><!-- cfgen-form-content -->
+
+        			</div><!-- cfgen-form-container -->
+        	</div>
+        	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.min.js"><\/script>')</script>
 
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.2/enquire.min.js"></script>
+
 		<!-- foundation -->
 		<script src="js/vendor/foundation.min.js" type="text/javascript"></script>
 		<script src="js/vendor/fnd.min.js" type="text/javascript"></script>
-		<script src="js/vendor/viewportchecker.min.js" type="text/javascript"></script>
+		<!-- <script src="js/vendor/viewportchecker.min.js" type="text/javascript"></script> -->
 		<script src="js/vendor/foundation.orbit.js" type="text/javascript"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js" type="text/javascript"></script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/jquery.tubular/1.0.1/jquery.tubular.1.0.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
 
 		<!-- form scripts -->
 		<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 		<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js"></script>
 		<script src="js/vendor.js" ></script>
-		<script src="js/jqueryform.com.min.js" ></script>
+		<script src="cfgen-form-1/js/form.js"></script>
+		<script src="cfgen-form-small/js/form.js"></script>
 
 		<script src="js/plugins.min.js"></script>
 		<script src="js/app.min.js"></script>

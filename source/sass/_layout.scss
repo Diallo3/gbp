@@ -1,44 +1,62 @@
+.inner-wrap {
+    position: relative;
+}
+
 .section_block {
     @include clearfix();
+    background-color: $white;
+    position: relative;
 }
 
 .block {
     background-color: #ccc;
     width: 100%;
+    min-height: 500px;
     height: 100vh;
     clear: both;
     position: relative;
     &.content_entry {
         background-color: $white;
+        position: relative;
+        z-index: 2;
         .headings_container {
-            @include bp(medium) {
+            @include bp(mediumUp) {
                 position: relative;
                 top: -80px;
             }
             text-align: center;
             .title, .tag {
-                color: $lt-gry;
+                color: darken($lt-gry, 5%);
                 text-transform: uppercase;
                 margin: 0;
             }
             .title {
                 @include worksans(em(120px), normal, 200);
+                @include bp(medium) {
+                    color: $white;
+                }
                 white-space: nowrap;
+            }
+            .tag {
+                color: darken($lt-gry, 15%);
             }
         }
         .headings {
             @include grid-row();
             .title_container {
                 @include grid-column(12);
-                @include bp(medium) {
+                @include bp(large) {
                     text-align: right;
                 }
                 text-align: center;
                 width: 100%;
                 position: relative;
                 .tag {
-                    @include worksans(em(24px), normal, 200);
+                    @include worksans(em(18px), normal, 200);
                     @include bp(medium) {
+                        @include worksans(em(24px), normal, 200);
+                    }
+                    @include bp(large) {
                         @include worksans(em(36px), normal, 200);
                     }
                 }
@@ -53,10 +71,16 @@
             .content {
                 @include grid-column(12);
                 @include bp(medium) {
+                    @include grid-column(8, $center: true);
+                }
+                @include bp(large) {
                     @include grid-column(8);
                     text-align: right;
+                    padding-bottom: 4em;
                 }
                 text-align: center;
+                padding-bottom: 2em;
+                z-index: 5;
                 .cap {
                     @include worksans(em(24px), normal, 300);
                     color: darken($lt-gry, 8%);
@@ -64,12 +88,14 @@
                 }
                 p {
                     @include worksans(em(24px), normal, 200);
-                    color: darken($lt-gry, 8%);
-                    &:nth-child(2) {
-                        color: darken($lt-gry, 12%);
-                        font-size: em(20px);
+                    color: darken($med-gry, 1.5%);
+                }
+                .alt {
+                    p {
+                        font-size: em(18px);
                         text-transform: uppercase;
                         a {
+                            font-weight: 300;
                             display: block;
                         }
                     }
@@ -85,25 +111,60 @@
                     border-bottom: 2px solid $oil;
                     margin-bottom: 1em;
                     padding-bottom: .5em;
-                }
-                .cat {
-                    color: $dodge-blu;
+                    a {
+                        color: $dodge-blu;
+                        display: inline-block;
+                        &.vid, &.ig {
+                            &:before {
+                                content: $fa-var-video-camera;
+                                font-family: fontawesome;
+                                font-size: 12px;
+                                margin: 0 5px 5px;
+                            }
+                        }
+                        &.ig {
+                            &:before {
+                                content: $fa-var-picture-o;
+                            } 
+                        }
+                    }
                 }
             }
             .img {
                 @include grid-column(12);
                 @include bp(medium) {
+                    @include grid-column(8, $center: true);
+                }
+                @include bp(large) {
                     @include grid-column(4);
+                }
+                @include bp(medium) {
+                    text-align: center;
+                }
+                .img-ph {
+                    height: 200px;
+                    display: block;
+                    .ph-box-holder, .ph-box {
+                        height: 100%;
+                    }
                 }
             }
         }
     }
 }
 
+.entry_alt {
+    p {
+        text-transform: uppercase;
+    }
+}
+
 .bg {
+    @include bp(medium_up) {
+        background-attachment: fixed;
+    }
     background-color: $black;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center ;
     background-size: cover;
     width: 100%;
@@ -117,17 +178,27 @@
 }
 
 .position {
-    @include worksans(em(32px), normal, 300);
+    @include worksans(em(20px), normal, 300);
+    @include bp(mediumUp) {
+        @include worksans(em(32px), normal, 300);
+        margin-bottom: 0;
+    }
     color: $dodge-blu;
+    margin-bottom: 2em;
     sup {
         color: lighten($brick-red, 10%);
     }
 }
 
 .hero {
+    background: transparent;
+    min-height: 300px;
     .bg {
-        background-image: url("#{$imgPath}/img_start.jpg");
+        @include bp(largeDown) {
+            background-image: url("#{$imgPath}/img_slide2_4.jpg");
 
+        }
+        background-color: transparent;
     }
     .content_strip {
         @include abs_pos($bottom: 0);
@@ -136,7 +207,7 @@
         width: 100%;
     }
     .title_container {
-        @include bp(medium) {
+        @include bp(large) {
             text-align: right;
             .title {
                 @include worksans(em(60px), normal, 300);
@@ -148,17 +219,11 @@
 
 .sidekick_vid {
     .bg {
+        @include bp(mediumDown) {
+            background-position: 90% center;
+        }
         background-image: url("#{$imgPath}/img_people.jpg");
 
-    }
-    .vid_btn {
-        &:before {
-            @include abs_pos($top: 20%, $left: 40%);
-            content: "\f04b";
-            color: $white;
-            font-family: "fontawesome";
-            font-size: 4em;
-        }
     }
     .content_strip {
         background-color: $lt-gry;
@@ -166,6 +231,9 @@
         .title {
             @include worksans(em(30px), normal, 400);
             @include bp(medium) {
+                @include worksans(em(40px), normal, 300);
+            }
+            @include bp(large) {
                 @include worksans(em(60px), normal, 300);
                 text-align: left;
             }
@@ -177,11 +245,14 @@
             height: 90%;
             position: relative;
             .title {
-                @include worksans($size: em(110px), $style: normal, $weight: 200);
-                @include bp(medium) {
+                @include worksans($size: em(100px), $style: normal, $weight: 200);
+                @include bp(mediumUp) {
                     @include worksans($size: em(200px), $style: normal, $weight: 200);
                     @include abs_pos($right: 0, $bottom: -60px);
                     z-index: 1;
+                }
+                @include bp(medium) {
+                    @include abs_pos($right: 0, $bottom: 0, $left:0);
                 }
                 color: $white;
                 text-align: center;
@@ -194,6 +265,9 @@
 
 .sidekick_img {
     .bg {
+        @include bp(mediumDown) {
+            background-position: 65% center;
+        }
         background-image: url("#{$imgPath}/img_commission_edu.jpg");
 
     }
@@ -212,12 +286,18 @@
     }
     &.bhutan {
         .bg {
+            @include bp(mediumDown) {
+                background-position: 0 center;
+            }
             background-image: url("#{$imgPath}/img_bhutan.jpg");
 
         }
     }
     &.tourism {
         .bg {
+            @include bp(mediumDown) {
+                background-position: right center;
+            }
             background-image: url("#{$imgPath}/img_commission_tourism.jpg");
 
         }
@@ -230,28 +310,38 @@
     }
     .entry {
         blockquote {
+            @include transition(all .3s ease);
             @include grid-column(12);
-            @include bp(medium) {
+            @include bp(large) {
                 @include grid-column(6);
                 text-align: right;
+                margin-left: -150px;
             }
             text-align: center;
             border: 0;
             padding: 15em 0 0;
             p {
                 @include worksans(em(36px), normal, 200);
-                color: $oil;
-                text-shadow: 1px 1px 0 white(.2);
+                color: $white;
+                text-shadow: 1px 1px 0 black(.5);
                 span {
                     @include clearfix();
                     display: inline-block;
                     em {
-                        color: $jet;
+                        color: $white;
                         font-weight: 300;
                         font-style: italic;
                     }
                     &:last-child {
                         border-bottom: 2px solid $jet;
+                    }
+                }
+            }
+            &.active {
+                p {
+                    color: $oil;
+                    span em {
+                        color: $jet;
                     }
                 }
             }
@@ -261,20 +351,30 @@
 
 .slideshow {
     @include bp(medium) {
+        max-height: 480px;
+    }
+    @include bp(large) {
         height: 100vh;
+        min-height: 100vh;
         overflow: hidden;
     }
+    background-color: $black;
     height: auto;
-    min-height: 100vh;
+    overflow: hidden;
     .content_strip {
-        @include abs_pos($top: 30%);
+        @include abs_pos($top: 2%);
+        @include bp(mediumUp) {
+            top: 30%;
+        }
         width: 100%;
+        z-index: 100;
     }
     .entry {
         @include grid-row();
         .content {
             @include grid-column(12);
             .title {
+                color: $white;
                 font-size: em(18px);
                 text-transform: uppercase;
             }
@@ -289,8 +389,8 @@
     .sidekick_img {
         .content {
             @include grid-column(12);
-            @include bp(medium) {
-                @include grid-column(6, $offset: 6);
+            @include bp(mediumUp) {
+                @include grid-column(6, $offset: 4);
             }
             text-align: center;
             padding-top: 5.5em;
@@ -329,25 +429,16 @@
     }
 }
 
-.time_elaspe {
-    .content {
-        @include grid-column(12);
-        @include bp(medium) {
-            @include grid-column(6, $offset: 6);
-        }
-    }
-}
-
 .bhutan {
     .content {
         @include grid-column(12);
-        @include bp(medium) {
-            @include grid-column(10);
+        @include bp(mediumUp) {
+            @include grid-column(10, $float: right);
             padding-top: 30%;
         }
         padding-top: 50%;
         header {
-            @include bp(medium) {
+            @include bp(mediumUp) {
                 // position: fixed;
                 top: 0;
                 right: 0;
@@ -357,24 +448,47 @@
             position: relative;
         }
         h3 {
+            @include bp(small) {
+                text-align: center;
+            }
             @include bp(medium) {
+                @include worksans(em(190px), normal, 700);
+            }
+            @include bp(large) {
                 @include worksans(em(230px), normal, 700);
                 line-height: .8;
             }
-            @include worksans(em(110px), normal, 700);
+            @include worksans(em(95px), normal, 700);
             color: $white;
             line-height: .8;
 
-            span {
+            .sur {
                 @include bp(medium) {
+                    @include worksans(38px, normal, 300);
+                    text-align: right;
+                    margin-right: .8em;
+                }
+                @include bp(large) {
                     @include worksans(40px, normal, 300);
+                    text-align: right;
+                    
                 }
                 @include worksans(20px, normal, 300);
-                text-align: right;
+                @include clearfix;
+                text-align: center;
                 text-transform: uppercase;
-                border-right: 4px solid $brick-red;
                 padding-right: .2em;
                 display: block;
+                i {
+                    background-color: $brick-red;
+                    margin-left: 5px;
+                    width: 4px;
+                    height: 15px;
+                    display: inline-block;
+                    @include bp(large) {
+                        height: 28px;
+                    }
+                }
             }
         }
     }
@@ -383,7 +497,7 @@
 .tourism {
     .content {
         @include grid-column(12);
-        @include bp(medium) {
+        @include bp(large) {
             @include grid-column(6);
             padding-top: 5em;
             blockquote {
@@ -399,33 +513,70 @@
     }
 }
 
-.video, .contact {
-    @include bp(medium) {
+.video, .time_elapse {
+    @include bp(large) {
         height: 100vh;
     }
     height: auto;
 }
 
+.time_elapse {
+    border-bottom: 1px solid $black;
+    overflow: hidden;
+    .flex-video {
+        @include bp(large) {
+            top: -90px;
+        }
+        width: 100%;
+    }
+}
+
+.video, .time_elapse {
+    @include bp(medium) {
+        max-height: 480px;
+    }
+}
+
 // blog entry
 .excerpt {
     @include clearfix();
+    color: $white;
+    text-align: center;
     background-color: $royal-blue;
-    border: solid $white;
-    border-width: 10px 0 0;
     padding: 2em;
     width: 100%;
     clear: both;
+    position: relative;
+    &:hover {
+        background-color: darken($royal-blue, 5%);
+    }
+    .excerpt_title {
+        color: $white;
+        font-family: Georgia;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+    }
     .excerpt_entry {
         @include grid-row();
+        padding: 0 2em;
+        position: relative;
         p {
-            @include bp(medium) {
-                text-align: left;
-            }
-            color: $white;
             font-family: Georgia;
-            font-size: 1.3em;
+            font-size: 1.1em;
             font-style: italic;
-            text-align: center;
+
+            &:before, &:after {
+                @include abs_pos($top: 2em, $left: 0);
+                content: $fa-var-quote-left;
+                color: $white;
+                font-family: fontawesome;
+                font-style: normal;
+            }
+            &:after {
+                content: $fa-var-quote-right;
+                right: 0;
+                left: auto;
+            }
         }
     }
 }
@@ -435,17 +586,133 @@
 }
 
 .map {
+    @include bp(small) {
+        display: none;
+    }
+    margin-bottom: 1em;
     position: relative;
-    img {
-        position: absolute;
+    .line {
+        @include abs_pos($top: 0, $left:0);
     }
 }
 
 .curtain {
-    @include abs_pos($top: 0, $left: 0);
-    background-color: $black;
-    width: 300%;
-    height: 1px;
+    @include abs_pos($top: 0, $right:0, $bottom:0, $left: 0);
+    background-color: black(.15);
+    // width: 300%;
+    // height: 1px;
 
-    opacity: 0;
+    // opacity: 0;
+}
+
+.offcanvas-overlap .exit-off-canvas {
+    background-color: black(.4);
+}
+
+.right-off-canvas-menu {
+    @include bp(small) {
+        width: 80%;
+    }
+    background-color: black(.8);
+    width: 50%;
+    position: fixed;
+    .mobile_menu {
+        @include flat_list();
+        a {
+            color: $white;
+            text-align: center;
+            border-bottom: 1px solid white(.2);
+            padding: 1.5em 2em;
+            display: block;
+        }
+    }
+}
+
+.reveal-modal {
+    &.story {
+        background-color: black(.8);
+        padding: 2em 0;
+        position: fixed;
+        top: 0 !important;
+        * {
+            color: $white;
+            font-weight: 300;
+        }
+        a[href^="mailto"] { 
+            font-style: italic;
+            font-weight: 600; 
+        }
+        .title {
+            @include allerta(4.3em, normal, 700);
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+        .meta {
+            @include opensans(1em, normal, 800);
+            color: $black;
+            text-align: center;
+            letter-spacing: 1px;
+            background-color: white(0.9);
+            border: 1px solid $med-gry;
+            padding: 0.3em 1em;
+        }
+        .featured {
+            margin-bottom: 2em;
+            img {
+                border: 1px solid $med-gry;
+                margin-bottom: 0.5em;
+            }
+            figcaption {
+                font-size: 0.8em;
+            }
+        }
+        blockquote {
+            font-family: Georgia;
+            font-style: italic;
+            border: 0px dotted $med-gry;
+            border-width: 0;
+            padding: 1.5em 0 1.5em 4em;
+            position: relative;
+            &:before {
+                @include abs_pos($top: 10px, $left: 0);
+                content: $fa-var-quote-left;
+                color: $med-gry;
+                font-family: fontawesome;
+                font-style: normal;
+                font-size: 3em;
+            }
+            p {
+                color: lighten($med-gry, 40%);
+            }
+        }
+        .date {
+            font-style: normal;
+            display: block;
+            span {
+                color: $royal-blue
+            }
+        }
+        .footnote {
+            border: 1px solid $royal-blue;
+            border-width: 2px 0;
+            padding: 1.5em 0 1em;
+            small {
+                font-size: 0.9em;
+                font-style: italic;
+            }
+        }
+        
+    }
+}
+
+.article_container {
+    margin: 2em 0;
+    height: 100%;
+    overflow: scroll;
+}
+
+.emp {
+    color: darken($dodge-blu, 10%);
+    font-size: .85em;
+    text-transform: uppercase;
 }
